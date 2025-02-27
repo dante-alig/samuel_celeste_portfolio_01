@@ -91,7 +91,7 @@ const Header = ({ parallaxRef }) => {
           animate="visible"
           variants={projectsVariants}
         >
-          <div className="projects-section">Selected projects</div>
+          <div className="projects-section">Derniers projets</div>
           <motion.div
             className="projects-title"
             onClick={() => scrollToSection(0.95, "Ghost")}

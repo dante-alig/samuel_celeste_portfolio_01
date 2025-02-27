@@ -1,11 +1,20 @@
 import React, { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useParams, useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { useProject } from "../context/ProjectContext";
+import projectData from "../services/projectData";
 
 const Project = () => {
   const { id } = useParams();
-  const { selectedProject } = useProject();
+  const { selectedProject, updateSelectedProject } = useProject();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const project = projectData.find((project) => project.projectId === id);
+    if (project) {
+      updateSelectedProject(project);
+    }
+  }, [id, updateSelectedProject]);
 
   console.log("Selected Project:", selectedProject);
   console.log("Features Overview:", selectedProject?.featuresOverview);
@@ -25,13 +34,31 @@ const Project = () => {
     };
   }, [selectedProject]);
 
+  const getNextProject = () => {
+    const currentIndex = projectData.findIndex(
+      (project) => project.projectId === selectedProject.projectId
+    );
+    const nextIndex = (currentIndex + 1) % projectData.length;
+    return projectData[nextIndex];
+  };
+
+  const handleNextProject = () => {
+    const nextProject = getNextProject();
+    updateSelectedProject(nextProject);
+    navigate(`/project/${nextProject.projectId}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   if (!selectedProject) {
     return (
       <div className="project-page" style={{ padding: "2rem" }}>
         <h1>Projet non trouvé</h1>
-        <Link to="/" style={{ color: "#fff", textDecoration: "underline" }}>
+        <div
+          onClick={() => navigate("/")}
+          style={{ color: "#fff", textDecoration: "underline", cursor: "pointer" }}
+        >
           Retour à l'accueil
-        </Link>
+        </div>
       </div>
     );
   }
@@ -39,20 +66,33 @@ const Project = () => {
   return (
     <div className="overview-presentation-container , top-page">
       <div className="overview-box">
-        <div className="overview-pagination">
+        <motion.div 
+          className="overview-pagination"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <span style={{ color: selectedProject.txtColor }}>
             {selectedProject.pageNumber}
           </span>
           <span>/</span>
           <span>{selectedProject.totalPages}</span>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           className="overview-title"
           style={{ color: selectedProject.txtColor }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           {selectedProject.title}
-        </div>
-        <div className="techno-project-container">
+        </motion.div>
+        <motion.div 
+          className="techno-project-container"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           {selectedProject.techno.map((techno, index) => (
             <span
               key={index}
@@ -65,7 +105,7 @@ const Project = () => {
               {techno}
             </span>
           ))}
-        </div>
+        </motion.div>
         <div className="video-container">
           {selectedProject.videoSlider ? (
             <video
@@ -86,22 +126,38 @@ const Project = () => {
         </div>
 
         <div className="line"></div>
-        <div className="overview-projet">
+        <motion.div 
+          className="overview-projet"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <div className="texte-projet-cat">Contexte</div>
           <div
             className="texte-projet"
             style={{ color: selectedProject.txtInfos }}
           >
-            {selectedProject.texte}
+            {selectedProject.pageSlider.texte}
           </div>
-        </div>
+        </motion.div>
         <div className="line"></div>
-        <div className="overview-projet">
+        <motion.div 
+          className="overview-projet"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
           <div className="texte-projet-cat">Challenges et objectifs</div>
           <div className="texte-projet">
             {selectedProject.pageSlider2?.featuresOverview &&
-              selectedProject.pageSlider2.featuresOverview.map((feature) => (
-                <div key={feature.id} style={{ marginBottom: "1rem" }}>
+              selectedProject.pageSlider2.featuresOverview.map((feature, index) => (
+                <motion.div 
+                  key={feature.id} 
+                  style={{ marginBottom: "1rem" }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
+                >
                   <div
                     className="texte-projet-title"
                     style={{
@@ -116,7 +172,7 @@ const Project = () => {
                   >
                     {feature.description}
                   </div>
-                </div>
+                </motion.div>
               ))}
           </div>
           <div
@@ -126,16 +182,17 @@ const Project = () => {
               borderColor: selectedProject.txtColor,
             }}
           >
-            <Link
+            <div
+              onClick={handleNextProject}
               style={{
                 color: selectedProject.txtColor,
+                cursor: 'pointer'
               }}
-              to="/"
             >
               Projet suivant
-            </Link>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
