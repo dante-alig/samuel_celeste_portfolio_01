@@ -163,6 +163,14 @@ header {
 .overview-box {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .overview-box {
+    width: 990px;
+  }
 }
 
 .overview-pagination {
@@ -960,6 +968,23 @@ header {
   align-items: center;
 }
 
+.texte-projet-description {
+  padding-bottom: 10px;
+}
+
+.zoning img {
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.mockup img {
+  object-fit: cover;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 .techno-project-container {
   display: flex;
   flex-wrap: wrap;
@@ -990,16 +1015,24 @@ header {
   font-weight: 300;
 }
 
+.texte-projet-bold {
+  line-height: 2.3rem;
+  font-size: 1.2em;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
 .texte-projet-title {
   line-height: 1.8rem;
-  font-size: 1.1em;
-  font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 50px;
+  padding-bottom: 10px;
 }
 
 .texte-projet-cat {
-  line-height: 1.8rem;
-  font-size: 0.9em;
-  text-transform: uppercase;
+  font-size: 1.3em;
+  margin-bottom: 10px;
 }
 
 .project-page .overview-presentation-container {
@@ -1061,6 +1094,7 @@ header {
   border: 1px solid;
   font-size: 0.7em;
   margin-bottom: 5vh;
+  gap: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1367,6 +1401,49 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .overview-box {
+    width: 990px;
+  }
+  .video-container {
+    width: 990px;
+    height: 558px;
+  }
+  .video-container video {
+    width: 990px;
+    height: 558px;
+  }
+}
+
+.format-outline {
+  background-color: black;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 40px;
+  font-size: 0.8em;
+}
+
+.outline-point {
+  margin-bottom: 15px;
+}
+
+.outline-title {
+  font-size: 1.4em;
+  color: white;
+}
+
+.outline-description p {
+  margin: 5px 0;
+  line-height: 1.2;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .context-section {
+    display: block;
+  }
+}
+
 /* Screen Warning Styles */
 .screen-warning {
   display: none;
@@ -1470,4 +1547,39 @@ header {
     height: 100%;
     object-fit: contain;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .video-container {
+    width: 990px;
+    height: 558px;
+    border-radius: 30px;
+  }
+  .video-container video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.persona-section {
+  padding: 60px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.persona-section + .persona-section {
+  margin-top: 10px;
+}
+
+.persona-presentation {
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.persona-description {
+  font-size: 0.8em;
+  line-height: 1.6;
+  font-style: italic;
 }

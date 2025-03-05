@@ -4,11 +4,14 @@ import Home from "./pages/home";
 import Project from "./pages/project";
 import Nav from "./components/nav";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import React, { useRef } from "react";
 import { ProjectProvider } from "./context/ProjectContext";
 
-library.add(faArrowUpRightFromSquare);
+library.add(faArrowUpRightFromSquare, faArrowRight);
 
 function App() {
   const parallax = useRef(null);

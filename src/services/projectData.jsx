@@ -68,6 +68,31 @@ import lovelyPresentation from "../images/presentation/lovely.png";
 import YeniPresentation from "../images/presentation/yeni.png";
 import ghostPresentation from "../images/presentation/ghost.png";
 
+// ------ project--------
+import lovelyProject from "../images/project/zoning_lovelyplace.png";
+import lovelyProject2 from "../images/project/zoning_lovelyplace2.jpg";
+import lovelyProject3 from "../images/project/zoning_lovelyplace3.png";
+import lovelyProject4 from "../images/project/zoning_lovelyplace4.png";
+import lovelyProject5 from "../images/project/zoning_lovelyplace5.png";
+import lovelyProject6 from "../images/project/zoning_lovelyplace6.png";
+import lovelyProject7 from "../images/project/zoning_lovelyplace7.png";
+import lovelyProject8 from "../images/project/zoning_lovelyplace8.png";
+import marvelProject1 from "../images/project/zoning_lovelyplace3.png";
+import marvelProject2 from "../images/project/zoning_lovelyplace3.png";
+import marvelPrototype1 from "../images/project/zoning_lovelyplace3.png";
+import marvelPrototype2 from "../images/project/zoning_lovelyplace3.png";
+import ghostProject1 from "../images/project/zoning_lovelyplace3.png";
+import ghostProject2 from "../images/project/zoning_lovelyplace3.png";
+import ghostPrototype1 from "../images/project/zoning_lovelyplace3.png";
+import ghostPrototype2 from "../images/project/zoning_lovelyplace3.png";
+import belamiProject1 from "../images/project/zoning_lovelyplace3.png";
+import belamiProject2 from "../images/project/zoning_lovelyplace3.png";
+import belamiPrototype1 from "../images/project/zoning_lovelyplace3.png";
+import belamiPrototype2 from "../images/project/zoning_lovelyplace3.png";
+import therapistProject1 from "../images/project/zoning_lovelyplace3.png";
+import therapistProject2 from "../images/project/zoning_lovelyplace3.png";
+import therapistPrototype1 from "../images/project/zoning_lovelyplace3.png";
+import therapistPrototype2 from "../images/project/zoning_lovelyplace3.png";
 // ------ mockups--------
 import mockup from "../images/page1/mockup.png";
 import yeniMockup from "../images/mockup_yeni.png";
@@ -149,27 +174,127 @@ const projectData = [
       featuresOverview: [
         {
           id: 1,
-          title: "Captivating Visual Design",
+          title: "Problématique",
           description:
-            "A vibrant yellow background with strategically placed images and clear layouts creates an engaging and visually appealing homepage.",
+            "L'idée derrière Ghost était de créer une plateforme interactive et amusante qui permet aux utilisateurs de tisser des liens avec leurs amis à travers des défis inédits. Le but : encourager la créativité, surprendre les participants grâce à un système aléatoire, et surtout, rendre les interactions sociales encore plus mémorables.",
+          persona: [
+            {
+              description:
+                "Je veux rendre mes soirées entre amis plus excitantes. Nous avons l'habitude de jouer à des jeux de société, mais j'aimerais quelque chose de plus inattendu et interactif — avec des défis amusants ! Je cherche une solution facile d'accès pour pimenter nos rassemblements.",
+              presentation: "Émilie, 27 ans, sociable et créative",
+            },
+            {
+              description:
+                "Mes amis et moi cherchons souvent des activités marrantes à faire ensemble, mais il est difficile de trouver des idées uniques. J'aimerais une plateforme où nous pourrions rapidement générer des défis amusants à relever.",
+              presentation: "Lucas, 22 ans, étudiant dynamique",
+            },
+          ],
         },
         {
           id: 2,
-          title: "Interactive Experience",
+          title: "Fonctionnalités clés",
           description:
-            "Dynamic animations like card flips and responsive actions ensure an enjoyable, gamified experience for users.",
+            "Offrir une expérience simple et sociale pour créer et participer à des défis entre amis, notamment grâce à une sélection aléatoire, qui rend chaque moment unique et engageant.",
+
+          formatAsOutline: {
+            point1: {
+              title: "Création de défis :",
+              description: {
+                sentence1:
+                  "Les utilisateurs peuvent proposer et enregistrer une liste de défis directement sur la plateforme.",
+                sentence2:
+                  "Chaque défi peut inclure une description et des règles spécifiques pour qu'ils soient clairs et amusants à réaliser.",
+              },
+            },
+            point2: {
+              title: "Système de sélection aléatoire :",
+              description: {
+                sentence1:
+                  "Après avoir ajouté des défis, le système choisit aléatoirement un défi pour le groupe, offrant un élément de surprise excitant.",
+              },
+            },
+            point3: {
+              title: "Gestion de groupe :",
+              description: {
+                sentence1:
+                  "Possibilité d'inviter des amis à collaborer sur une liste de défis commune ou à relever des défis ensemble.",
+                sentence2:
+                  "Création d'une expérience sociale et participative pour renforcer les interactions entre les utilisateurs.",
+              },
+            },
+          },
         },
         {
           id: 3,
-          title: "Random Challenge Assignment",
+          title: "Inspiration & visuels",
           description:
-            "Tasks are randomly and fairly distributed using an automated system, with clear visual states to track progress.",
+            'Pour concevoir Ghost, je me suis inspiré de jeux interactifs comme "Action ou Vérité" et d\'autres plateformes sociales qui encouragent les interactions spontanées et amusantes entre amis.',
+          image1: ghostProject1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: ghostProject2,
+          widthImage2: "990",
+          heightImage2: "400",
         },
         {
           id: 4,
-          title: "Responsive Design",
+          title: "Prototype",
           description:
-            "The interface adapts seamlessly to all screen sizes, using a dynamic grid layout for optimal functionality and an accessible user experience.",
+            "En concevant Ghost, l'accent a été mis sur une interface simple à utiliser et un flux interactif qui favorise la participation des groupes d'amis. Chaque interaction a été étudiée pour faciliter l'ajout de défis et assurer un déroulement amusant et flexible.",
+          image1: ghostPrototype1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: ghostPrototype2,
+          widthImage2: "990",
+          heightImage2: "200",
+        },
+        {
+          id: 5,
+          title: "Réalisation technique",
+          description:
+            "Ghost a été développé grâce à un stack technologique moderne pour offrir une expérience fluide et intuitive, tout en mettant en place des fonctionnalités interactives et en favorisant les interactions en temps réel :",
+          formatAsOutline: {
+            point1: {
+              title:
+                "React.js pour une interface utilisateur dynamique et réactive :",
+              description: {
+                sentence1:
+                  "L'utilisation de composants réutilisables a permis une structure propre et un parcours utilisateur simplifié.",
+                sentence2:
+                  "Expérience single-page application (SPA), garantissant une navigation fluide pour les utilisateurs.",
+                sentence3:
+                  "Compatibilité avec tous les appareils (desktop, tablette, mobile).",
+              },
+            },
+            point2: {
+              title:
+                "Node.js et Express.js pour une architecture backend rapide :",
+              description: {
+                sentence1:
+                  "Une API RESTful a été mise en place pour gérer la création, consultation et partage des défis.",
+                sentence2:
+                  "Gestion efficace des utilisateurs et des groupes pour favoriser la collaboration.",
+              },
+            },
+            point3: {
+              title: "MongoDB pour le stockage des données :",
+              description: {
+                sentence1:
+                  "Un modèle de base de données flexible, utilisant une structure NoSQL, a permis de gérer les utilisateurs, groupes et défis sans contraintes.",
+                sentence2:
+                  "Mise en place de filtres et tris performants pour un accès rapide aux données.",
+              },
+            },
+            point4: {
+              title: "Système interactif et aléatoire :",
+              description: {
+                sentence1:
+                  "Un générateur aléatoire, combiné à une logique backend, permet de choisir un défi parmi ceux enregistrés.",
+                sentence2:
+                  "Mécanisme favorisant l'unique et l'imprévisible pour une expérience toujours excitante.",
+              },
+            },
+          },
         },
       ],
     },
@@ -188,11 +313,11 @@ const projectData = [
     },
     link: [
       {
-        url: "https://dareyouapp.netlify.app/",
+        url: `/project/ghost`,
         title: "En savoir plus",
       },
       {
-        url: "https://github.com/dante-alig/lovelyplace_tsx.git",
+        url: "https://github.com/dante-alig/ghost.git",
         title: "Code Github",
       },
     ],
@@ -201,7 +326,7 @@ const projectData = [
     pageNumber: "02",
     totalPages: "06",
     titlePresentation:
-      "Lovely place - Les lieux parfaits à Paris pour des rendez-vous mémorables.",
+      "Lovely place - Trouvez le lieu parfait pour votre prochain rendez-vous.",
     title: "Lovely place",
     projectId: "lovely",
     date: " Décembre 2024 - en cours ",
@@ -216,9 +341,10 @@ const projectData = [
     roles: ["Ui/Ux Design", "Dev front & back"],
     bgColor: "#f5e6c7",
     txtColor: "black",
-    txtInfos: "grey",
+    txtInfos: "black",
     border: "black",
     bgContainer: "black",
+    textQuote: "white",
     videoSlider: video4,
     pageSlider: {
       icon: lovely,
@@ -265,31 +391,131 @@ const projectData = [
     pageSlider2: {
       videoSlider: video4,
       backgroundSlider: "#000000",
-      textColor: "white",
       featuresOverview: [
         {
           id: 1,
-          title: "Advanced Geolocation and Map Integration",
+          title: "Problématique",
           description:
-            "Leverage the Google Maps API to provide precise geolocation features and an interactive map experience. Display real-time recommendations, opening hours, dynamic markers for locations, and offer detailed routes for seamless navigation.",
+            "L'objectif était de concevoir un site simple et agréable, permettant de rechercher et réserver facilement le lieu idéal pour un rendez-vous. L'idée : proposer une expérience fluide et accessible à tous, qu'il s'agisse d'une personne au budget limité ou à la recherche d'un lieu haut de gamme. Le site devait offrir une personnalisation intuitive (ambiance, prix, localisation) sans submerger l'utilisateur, tout en garantissant un parcours rapide, fluide et rassurant pour encourager les retours.",
+          persona: [
+            {
+              description:
+                "Je viens de commencer une relation et je veux organiser des rendez-vous spéciaux. Mais avec tant d'options, je finis indécis. Je cherche quelque chose de romantique, pas cliché, et manque souvent d'inspiration. Je n'ai pas le temps de passer des heures à chercher et j'ai peur de choisir un endroit décevant.",
+              presentation: "Daniel, 36 ans, en début de relation",
+            },
+            {
+              description:
+                "Pour un premier rendez-vous, je veux trouver un lieu original et détendu qui impressionne sans en faire trop. Avec mon budget d'étudiant, c'est difficile, et j'ai peur de choisir un endroit inadapté.",
+              presentation: "Karim, 24 ans, étudiant",
+            },
+          ],
         },
         {
           id: 2,
-          title: "Intelligent and Customizable Filtering",
+          title: "Fonctionnalités clés",
           description:
-            "Develop a robust and intelligent filtering system, allowing users to refine their search based on criteria such as activity type, ambiance, budget, or personalized preferences.",
+            "Integrate a streamlined and secure payment workflow using Stripe, ensuring smooth transactions while complying with the latest data privacy and security standards.",
+
+          formatAsOutline: {
+            point1: {
+              title: "Recherche et filtrage avancés :",
+              description: {
+                sentence1:
+                  "Les utilisateurs peuvent chercher un lieu par catégorie, prix, ambiance, ou encore par localisation grâce à une carte interactive.",
+                sentence2:
+                  "Les recommandations sont générées dynamiquement à l'aide d'un algorithme basé sur les préférences des utilisateurs.",
+              },
+            },
+            point2: {
+              title: "Parcours de réservation fluide :",
+              description: {
+                sentence1:
+                  "Ajout des options coup de cœur pour stocker les préférences.",
+                sentence2:
+                  "Processus de réservation simplifié et clair, avec une estimation des frais avant la validation.",
+              },
+            },
+            point3: {
+              title: "Paiement sécurisé :",
+              description: {
+                sentence1:
+                  "Intégration d'une API de paiement sécurisée pour gérer les transactions sans efforts.",
+              },
+            },
+          },
         },
         {
           id: 3,
-          title: "Member-Exclusive Content Access",
+          title: "Inspiration & maquette",
           description:
-            "Implement a secure authentication and premium membership system, granting exclusive access to curated content and advanced features tailored specifically for subscribed users.",
+            "Pour créer Lovely Place, Je me suis inspirés de plateformes comme Netflix, Prime Video et Roblox, reconnues pour leurs outils offrant un environnement sécurisé et adapté aux enfants.",
+          image1: lovelyProject4,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: lovelyProject3,
+          widthImage2: "990",
+          heightImage2: "400",
         },
         {
+          id: 4,
+          title: "Prototype",
+          description:
+            "La philosophie de conception s'articulait autour d'une simplicité sans effort. Chaque interaction était conçue pour minimiser les frictions et guider naturellement les utilisateurs. tout au long du processus de paiement. Les principes clés comprenaient :",
+          image1: lovelyProject5,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: lovelyProject6,
+          widthImage2: "990",
+          heightImage2: "200",
+        },
+
+        {
           id: 5,
-          title: "Secure Payment System with Stripe",
+          title: "Réalisation technique ",
           description:
             "Integrate a streamlined and secure payment workflow using Stripe, ensuring smooth transactions while complying with the latest data privacy and security standards.",
+          formatAsOutline: {
+            point1: {
+              title:
+                "React.js pour une interface utilisateur dynamique et rapide. ",
+              description: {
+                sentence1:
+                  "React permet une navigation fluide grâce à une gestion optimisée des états.",
+                sentence2:
+                  "Une expérience moderne en single-page application (SPA).",
+                sentence3:
+                  "L’adaptabilité à tous les appareils (ordinateur, tablette, mobile).",
+              },
+            },
+            point2: {
+              title:
+                "Node.js et Express.js pour une gestion de serveur rapide et efficace :",
+              description: {
+                sentence1:
+                  "Création d’API RESTful permettant d’assurer une communication fluide entre le frontend et le backend.",
+                sentence2:
+                  "Architecture modulaire pour des fonctionnalités évolutives.",
+              },
+            },
+            point3: {
+              title:
+                "MongoDB pour un stockage des données flexible et orienté documents :",
+              description: {
+                sentence1:
+                  "Utilisation d’une structure NoSQL adaptée à la gestion de données complexes (lieux et activités).",
+                sentence2:
+                  "Implémentation de filtres performants pour la personnalisation.",
+              },
+            },
+            point4: {
+              title: "Google API :",
+              description: {
+                sentence1:
+                  "Consultation des cartes via Google Maps pour faciliter la recherche géolocalisée des lieux.",
+                sentence2: "Intégration d'une recherche avancée des adresses.",
+              },
+            },
+          },
         },
       ],
     },
@@ -308,7 +534,7 @@ const projectData = [
     },
     link: [
       {
-        url: "https://dareyouapp.netlify.app/",
+        url: `/project/lovely`,
         title: "En savoir plus",
       },
       {
@@ -381,33 +607,129 @@ const projectData = [
       featuresOverview: [
         {
           id: 1,
-          title: "Marvel API Integration",
+          title: "Problématique",
           description:
-            "Building a web application using the Marvel API to efficiently fetch and display superhero data, demonstrating the ability to work with real-world APIs.",
+            "Le défi était de concevoir une application web attrayante permettant aux utilisateurs de découvrir l'univers Marvel tout en ayant la possibilité de gérer leurs personnages et comics favoris. De plus, l'intégration d'une API personnalisée a permis de simuler une intégration d'API réelle en respectant les contraintes techniques et de temps.",
+          persona: [
+            {
+              description:
+                "Je suis un grand fan de comics et je veux découvrir de nouveaux personnages et histoires Marvel. Cependant, il est parfois difficile de trier les informations et de tout retrouver facilement.",
+              presentation:
+                "Thomas, 30 ans, passionné de comics et de super-héros",
+            },
+            {
+              description:
+                "Je découvre l'univers Marvel et je ne connais pas encore très bien les personnages. Je cherche une interface intuitive où je peux explorer les favoris, en évitant trop de données techniques ou inutiles.",
+              presentation: "Alicia, 25 ans, curieuse de l'univers Marvel",
+            },
+          ],
         },
         {
           id: 2,
-          title: "User Authentication System",
+          title: "Fonctionnalités clés",
           description:
-            "Implementing a secure registration and login system, allowing users to create accounts, log in, and manage their favorite superheroes securely.",
+            "Intégrer une interface fluide et conviviale pour découvrir personnages et comics tout en gardant la possibilité de les enregistrer en favoris sur un compte sécurisé.",
+
+          formatAsOutline: {
+            point1: {
+              title: "Recherche et exploration :",
+              description: {
+                sentence1:
+                  "Les utilisateurs peuvent rechercher des personnages ou comics Marvel grâce à un champ de recherche intuitif, ou en naviguant dans les catégories.",
+                sentence2:
+                  "Accéder à des informations détaillées sur les personnages ou les bandes dessinées (ex : description, séries associées, images) bien que certaines données pouvaient manquer en raison de la base de données restreinte de l'API.",
+              },
+            },
+            point2: {
+              title: "Gestion des favoris :",
+              description: {
+                sentence1:
+                  "Ajout de personnages et de comics en favoris dans un compte utilisateur sécurisé.",
+                sentence2:
+                  "Possibilité de se connecter ou de s'inscrire afin de sauvegarder ses choix.",
+              },
+            },
+            point3: {
+              title: "Sécurité et connexion :",
+              description: {
+                sentence1:
+                  "Mise en place d'un système d'authentification sécurisé, garantissant la confidentialité des comptes des utilisateurs.",
+                sentence2:
+                  "Gestion des sessions via des tokens pour permettre un accès sécurisé aux favoris.",
+              },
+            },
+          },
         },
         {
           id: 3,
-          title: "Favorite Items Management",
+          title: "Inspiration & visuels",
           description:
-            "Adding functionality for users to save and organize their favorite Marvel characters while ensuring a seamless user experience.",
+            "Pour concevoir le projet Marvel, nous avons analysé des interfaces de plateformes interactives favorisant l'exploration facile de leur contenu, à l'image de l'ergonomie de Netflix ou la puissance des interfaces API d'autres géants du domaine.",
+          image1: marvelProject1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: marvelProject2,
+          widthImage2: "990",
+          heightImage2: "400",
         },
         {
           id: 4,
-          title: "Modern Visual Design",
+          title: "Prototype",
           description:
-            "Designing a sleek, dark-themed interface with bold colors and a clear layout, enhancing the user experience by making the information visually appealing and easy to navigate.",
+            "L'objectif du design était d'optimiser la découverte de l'univers Marvel tout en minimisant les frictions lors de l'exploration. Chaque interaction a été pensée pour être intuitive et rapide grâce à une navigation sobre et accueillante.",
+          image1: marvelPrototype1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: marvelPrototype2,
+          widthImage2: "990",
+          heightImage2: "200",
         },
         {
           id: 5,
-          title: "Time-Based Development Challenge",
+          title: "Réalisation technique",
           description:
-            "Developing the project under a 7-day deadline, focusing on delivering a functional outcome while enhancing technical skills and time management.",
+            "L'application fut développée en utilisant des technologies modernes pour une expérience utilisateur fluide et rapide, tout en utilisant une API externalisée conçue spécialement pour le projet. Les aspects clés incluaient :",
+          formatAsOutline: {
+            point1: {
+              title:
+                "React.js pour une interface utilisateur dynamique et performante :",
+              description: {
+                sentence1:
+                  "Utilisation de composants réutilisables pour une architecture propre et modulable.",
+                sentence2:
+                  "Expérience single-page application (SPA) pour une navigation fluide.",
+                sentence3:
+                  "Site responsive, offrant une compatibilité sur PC, tablettes et mobiles.",
+              },
+            },
+            point2: {
+              title: "Node.js et Express.js pour le backend :",
+              description: {
+                sentence1:
+                  "API RESTful pour la communication entre le frontend et le backend.",
+                sentence2:
+                  "Gestion efficace des utilisateurs grâce à une base solide d'authentification.",
+              },
+            },
+            point3: {
+              title: "MongoDB pour la base de données des utilisateurs :",
+              description: {
+                sentence1:
+                  "Stockage flexible des comptes et des favoris, garantissant une personnalisation pour chaque utilisateur.",
+                sentence2:
+                  "Interactions efficaces et optimisées pour gérer un grand nombre de connexions simultanées.",
+              },
+            },
+            point4: {
+              title: "Gestion et utilisation de l'API Marvel personnalisée :",
+              description: {
+                sentence1:
+                  "Exploration des personnages, comics et séries via des appels API asynchrones.",
+                sentence2:
+                  "Gestion des limites et des données incomplètes en raison d'une base de données restreinte.",
+              },
+            },
+          },
         },
       ],
     },
@@ -426,11 +748,11 @@ const projectData = [
     },
     link: [
       {
-        url: "https://dareyouapp.netlify.app/",
+        url: `/project/marvel`,
         title: "En savoir plus",
       },
       {
-        url: "https://github.com/dante-alig/lovelyplace_tsx.git",
+        url: "https://github.com/dante-alig/marvel.git",
         title: "Code Github",
       },
     ],
@@ -512,33 +834,137 @@ const projectData = [
       featuresOverview: [
         {
           id: 1,
-          title: "AI-Powered Profile Analysis",
+          title: "Problématique",
           description:
-            "Implementing advanced NLP (Natural Language Processing) to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+            "Belami est une solution innovante face à un défi commun : trouver des phrases d'accroche authentiques et personnalisées pour engager des conversations sur les réseaux sociaux. L'objectif était de développer une application mobile intelligente, capable d'analyser des profils pour suggérer des talents conversationnels uniques, tout en rendant l'expérience simple et agréable pour l'utilisateur.",
+          persona: [
+            {
+              description:
+                "Je trouve difficile de briser la glace sur les applications et réseaux sociaux. J'aimerais qu'une application m'aide à créer des phrases d'accroche adaptées au contenu visible sur le profil, sans avoir l'air générique ou artificiel.",
+              presentation:
+                "Léa, 29 ans, professionnelle active cherchant des connexions authentiques",
+            },
+            {
+              description:
+                "Je veux me démarquer et éviter les banalités lorsque j'engage des conversations en ligne. Disposer d'une application qui me donne des suggestions originales basées sur les informations des profils serait un véritable avantage.",
+              presentation:
+                "Guillaume, 25 ans, passionné par les interactions en ligne",
+            },
+          ],
         },
         {
           id: 2,
-          title: "Personalized Content Generation",
+          title: "Fonctionnalités clés",
           description:
-            "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+            "Belami utilise une technologie avancée pour analyser les profils des utilisateurs et générer des phrases d'accroche personnalisées et engageantes en fonction de leurs centres d'intérêt et caractéristiques visibles.",
+
+          formatAsOutline: {
+            point1: {
+              title: "Analyse de profil :",
+              description: {
+                sentence1:
+                  "Traitement optimisé des informations disponibles sur les réseaux sociaux pour relever des points saillants (ex : centre d'intérêt, description personnelle, photos, etc.).",
+                sentence2:
+                  "Création d'approches spécifiques basées sur la tonalité et les données pertinentes issues des profils.",
+              },
+            },
+            point2: {
+              title: "Personnalisation et choix du ton :",
+              description: {
+                sentence1:
+                  "L'application propose divers styles de communication : humoristique, poli, inventif ou sérieux.",
+                sentence2:
+                  "Les utilisateurs peuvent ajuster le type de phrases d'accroche en fonction de leurs préférences ou des contextes.",
+              },
+            },
+            point3: {
+              title: "Sauvegarde des phrases favorites :",
+              description: {
+                sentence1:
+                  "Possibilité pour l'utilisateur de conserver ses phrases favorites dans une bibliothèque personnelle.",
+                sentence2:
+                  "Historique accessible permettant de retrouver des idées passées pour de futures conversations.",
+              },
+            },
+            point4: {
+              title: "Interface épurée et minimaliste :",
+              description: {
+                sentence1:
+                  "Accès rapide à toutes les fonctionnalités grâce à un design clair et intuitif.",
+                sentence2:
+                  "Adaptabilité mobile garantissant une expérience utilisateur optimale sur tous les appareils.",
+              },
+            },
+          },
         },
         {
           id: 3,
-          title: "Flexible Tone Options",
+          title: "Inspiration & visuels",
           description:
-            "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+            "Pour créer Belami, nous nous sommes inspirés d'outils modernes utilisant le traitement du langage naturel, tels que les générateurs de contenu conversationnel et les plateformes offrant des expériences interactives et simples. L'interface a été pensée pour capturer l'élégance et l'utilité d'applications populaires comme Grammarly ou Tinder, tout en offrant une approche plus personnalisée.",
+          image1: belamiProject1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: belamiProject2,
+          widthImage2: "990",
+          heightImage2: "400",
         },
         {
           id: 4,
-          title: "Saved Data Management",
+          title: "Prototype",
           description:
-            "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
+            "En développement, la priorité a été donnée à une interface utilisateur intuitive et captivante, permettant un accès fluide aux phrases d'accroche personnalisées et à l'historique des conversations. Chaque détail a été pensé pour minimiser la friction et offrir la meilleure expérience possible en fonction des profils analysés.",
+          image1: belamiPrototype1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: belamiPrototype2,
+          widthImage2: "990",
+          heightImage2: "200",
         },
         {
           id: 5,
-          title: "Intuitive and User-Friendly Design",
+          title: "Réalisation technique",
           description:
-            "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+            "Belami repose sur des technologies modernes pour créer une expérience rapide, intelligente et conviviale. Les fonctionnalités clés ont été pensées pour allier performance technique et adaptabilité.",
+
+          formatAsOutline: {
+            point1: {
+              title: "React Native pour un développement mobile performant :",
+              description: {
+                sentence1:
+                  "Application mobile cross-platform permettant un accès fluide à la fois sur iOS et Android.",
+                sentence2:
+                  "Structure réactive assurant une gestion optimale des interactions grâce à des composants modernes.",
+              },
+            },
+            point2: {
+              title: "Capacités de traitement du langage naturel (NLP) :",
+              description: {
+                sentence1:
+                  "Analyse intelligente des textes de profil grâce à des algorithmes NLP conçus pour détecter des thèmes et créer des phrases adaptées.",
+                sentence2:
+                  "Utilisation de bibliothèques d'intelligence artificielle comme TensorFlow ou SpaCy pour maximiser la pertinence des suggestions.",
+              },
+            },
+            point3: {
+              title: "Backend robuste avec Node.js et Express.js :",
+              description: {
+                sentence1:
+                  "Création d'une API RESTful pour la communication fluide entre le frontend mobile et le backend.",
+                sentence2:
+                  "Gestion sécurisée des sauvegardes des phrases préférées et des préférences des utilisateurs.",
+              },
+            },
+            point4: {
+              title: "Base de données MongoDB scalable :",
+              description: {
+                sentence1:
+                  "Stockage structuré et flexible des données liés aux utilisateurs, telles que leurs préférences de ton ou leurs phrases favorites.",
+                sentence2:
+                  "Performance optimisée pour permettre une gestion rapide des suggestions personnalisées.",
+              },
+            },
+          },
         },
       ],
     },
@@ -557,11 +983,11 @@ const projectData = [
     },
     link: [
       {
-        url: "https://dareyouapp.netlify.app/",
+        url: `/project/belami`,
         title: "En savoir plus",
       },
       {
-        url: "https://github.com/dante-alig/lovelyplace_tsx.git",
+        url: "https://github.com/dante-alig/belami.git",
         title: "Code Github",
       },
     ],
@@ -637,27 +1063,129 @@ const projectData = [
       featuresOverview: [
         {
           id: 1,
-          title: "Elegant Gallery Presentation",
+          title: "Problématique",
           description:
-            "Creating a visually striking tiled layout to showcase the artist's works, with subtle hover effects and optimal image quality for an engaging browsing experience.",
+            "Le projet consistait à créer un site web fonctionnel pour un thérapeute, ayant pour but de présenter ses services et de faciliter la prise de contact. Misant sur un design minimaliste et épuré, ce projet se concentrait autant sur l'expérience utilisateur que sur l'apprentissage technique approfondi de TypeScript. L'objectif principal était d'acquérir et de consolider des bases solides dans le langage tout en répondant aux besoins du client.",
+          persona: [
+            {
+              description:
+                "Je suis thérapeute et j'ai besoin d'un site professionnel qui informe efficacement mes patients potentiels sur mes services et leur permet de me contacter facilement. Il est important que mon site dégage une impression de simplicité, de calme et de clarté.",
+              presentation:
+                "Claire, 42 ans, thérapeute spécialisée en thérapies holistiques",
+            },
+            {
+              description:
+                "En tant que patient potentiel, je cherche un site simplifié où je peux me renseigner rapidement sur la thérapie et réserver une consultation. Le site doit être clair, rassurant et intuitif.",
+              presentation: "Antoine, 35 ans, cherche un soutien thérapeutique",
+            },
+          ],
         },
         {
           id: 2,
-          title: "Smooth Animation Integration",
+          title: "Fonctionnalités clés",
           description:
-            "Implementing Framer Motion animations for page transitions, image galleries, and interactive elements to enhance user engagement while maintaining a sophisticated aesthetic.",
+            "Ce site web a été conçu pour répondre aux besoins pratiques d'un thérapeute tout en favorisant une compréhension des concepts fondamentaux de TypeScript. Les fonctionnalités clés incluaient :",
+
+          formatAsOutline: {
+            point1: {
+              title: "Présentation des services :",
+              description: {
+                sentence1:
+                  "Une page dédiée à la présentation des différentes méthodes thérapeutiques et des spécialités du praticien, illustrant ses compétences et expériences.",
+                sentence2:
+                  "Une section claire expliquant les bénéfices des thérapies et répondant aux principales questions des patients.",
+              },
+            },
+            point2: {
+              title: "Prise de contact simplifiée :",
+              description: {
+                sentence1:
+                  "Un formulaire de contact directement intégré au site, permettant aux utilisateurs de poser leurs questions ou de demander un rendez-vous.",
+                sentence2:
+                  "Des champs de formulaire validés en TypeScript pour garantir des données fiables (e-mail valide, champs obligatoires, etc.).",
+              },
+            },
+            point3: {
+              title: "Design minimaliste et fonctionnel :",
+              description: {
+                sentence1:
+                  "Un design volontairement simple et épuré, aligné avec la profession de thérapeute, instaurant un sentiment de confiance et de calme.",
+                sentence2:
+                  "Responsivité assurée pour une navigation fluide sur tous supports (smartphone, tablette, ordinateur).",
+              },
+            },
+          },
         },
         {
           id: 3,
-          title: "Minimalist User Interface",
+          title: "Inspiration & conclusions",
           description:
-            "Designing a professional, minimalist interface tailored to specific client needs, ensuring smooth and seamless navigation through intuitive section structuring.",
+            "Pour ce projet, j'ai priorisé une approche technique et éducative. En m'inspirant de designs sobres utilisés dans les domaines du bien-être et de la santé, j'ai cherché à créer un site simple et intuitif tout en renforçant mes compétences en développement front-end. Le but sous-jacent était de solidifier ma maîtrise de TypeScript en l'appliquant de manière pratique sur un projet réel.",
+          image1: therapistProject1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: therapistProject2,
+          widthImage2: "990",
+          heightImage2: "400",
         },
         {
           id: 4,
-          title: "Appointment Scheduling with Calendly",
+          title: "Prototype",
           description:
-            "Implementing an appointment scheduling feature through Calendly, allowing users to easily book consultations with a seamless and integrated process.",
+            "Lors de la conception du site, le prototype a souligné l'importance d'une navigation claire et d'une hiérarchie visuelle intuitive. Les pages ont été esquissées en mettant en avant les informations vitales pour les utilisateurs (services proposés et prise de contact). Les tests itératifs ont permis d'ajuster les éléments pour atteindre un compromis entre simplicité et professionnalisme.",
+          image1: therapistPrototype1,
+          widthImage1: "990",
+          heightImage1: "600",
+          image2: therapistPrototype2,
+          widthImage2: "990",
+          heightImage2: "200",
+        },
+        {
+          id: 5,
+          title: "Réalisation technique",
+          description:
+            "Ce projet a été conçu avant tout pour approfondir mes compétences en TypeScript et découvrir son applicabilité dans un environnement réel. Les choix technologiques et outils utilisés reflètent une volonté d'équilibre entre apprentissage et réalisation pratique.",
+
+          formatAsOutline: {
+            point1: {
+              title: "TypeScript pour une écriture de code robuste :",
+              description: {
+                sentence1:
+                  "Découverte et application des fonctionnalités clés de TypeScript : typage statique, interfaces, union types, et autres.",
+                sentence2:
+                  "Validation des données d'entrée côté frontend grâce aux facilités offertes par TypeScript.",
+                sentence3:
+                  "Production d'un code plus lisible, maintenable et exempt d'erreurs potentielles.",
+              },
+            },
+            point2: {
+              title: "React.js pour le frontend du site :",
+              description: {
+                sentence1:
+                  "Utilisation de React.js pour la création des composants réutilisables de l'interface utilisateur.",
+                sentence2:
+                  "Gestion des états facilitée pour offrir une expérience fluide et dynamique aux visiteurs.",
+              },
+            },
+            point3: {
+              title: "Node.js et Express.js pour la gestion backend :",
+              description: {
+                sentence1:
+                  "Mise en place d'un backend léger pour gérer les requêtes issues des formulaires de contact.",
+                sentence2:
+                  "Validation côté serveur des données utilisateurs pour garantir une mesure de sécurité supplémentaire.",
+              },
+            },
+            point4: {
+              title: "Responsivité avec CSS :",
+              description: {
+                sentence1:
+                  "Conception modulaire des styles en CSS pour assurer une mise en page adaptée à tous les appareils.",
+                sentence2:
+                  "Utilisation de Flexbox et Grid pour optimiser les alignements sur le site.",
+              },
+            },
+          },
         },
       ],
     },
@@ -676,7 +1204,7 @@ const projectData = [
     },
     link: [
       {
-        url: "https://karineraspail.netlify.app/",
+        url: `/project/karine`,
         title: "En savoir plus",
       },
       {
@@ -776,11 +1304,11 @@ const projectData = [
     },
     link: [
       {
-        url: "https://karineraspail.netlify.app/",
+        url: `/project/yeni`,
         title: "En savoir plus",
       },
       {
-        url: "https://github.com/dante-alig/karineraspail.git",
+        url: "https://github.com/dante-alig/yeni.git",
         title: "Code Github",
       },
     ],

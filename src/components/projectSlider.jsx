@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Page1 from "./page1";
 import Page2 from "./page2";
@@ -25,6 +25,17 @@ const ProjectSlider = ({
   pageSlider2,
   pageSlider3,
 }) => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (url, title) => {
+    if (url.startsWith('/')) {
+      navigate(url);
+    } else {
+      window.open(url, '_blank', 'noopener noreferrer');
+    }
+    trackClick(title, url.startsWith('/') ? 'internal-link' : 'external-link');
+  };
+
   return (
     <div className="project-slider-container">
       <Swiper
@@ -48,16 +59,15 @@ const ProjectSlider = ({
           return (
             <ul key={index} className="linkto">
               <li style={{ border: `1px solid ${txtColor}` }}>
-                <Link
-                  to={objet.url}
-                  style={{ color: txtColor }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackClick(objet.title, "external-link")}
+                <div
+                  onClick={() => handleLinkClick(objet.url, objet.title)}
+                  style={{ color: txtColor, cursor: 'pointer' }}
+                  role="button"
+                  tabIndex={0}
                 >
                   {objet.title}
                   <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" />
-                </Link>
+                </div>
               </li>
             </ul>
           );

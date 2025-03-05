@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useProject } from "../context/ProjectContext";
 import projectData from "../services/projectData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Project = () => {
   const { id } = useParams();
@@ -46,7 +47,7 @@ const Project = () => {
     const nextProject = getNextProject();
     updateSelectedProject(nextProject);
     navigate(`/project/${nextProject.projectId}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   if (!selectedProject) {
@@ -55,7 +56,11 @@ const Project = () => {
         <h1>Projet non trouvé</h1>
         <div
           onClick={() => navigate("/")}
-          style={{ color: "#fff", textDecoration: "underline", cursor: "pointer" }}
+          style={{
+            color: "#fff",
+            textDecoration: "underline",
+            cursor: "pointer",
+          }}
         >
           Retour à l'accueil
         </div>
@@ -66,7 +71,7 @@ const Project = () => {
   return (
     <div className="overview-presentation-container , top-page">
       <div className="overview-box">
-        <motion.div 
+        <motion.div
           className="overview-pagination"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,7 +92,7 @@ const Project = () => {
         >
           {selectedProject.title}
         </motion.div>
-        <motion.div 
+        <motion.div
           className="techno-project-container"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -109,11 +114,11 @@ const Project = () => {
         <div className="video-container">
           {selectedProject.videoSlider ? (
             <video
+              key={selectedProject.projectId}
               autoPlay
               loop
               muted
               playsInline
-              style={{ width: "100%", height: "220px", objectFit: "cover" }}
             >
               <source src={selectedProject.videoSlider} type="video/mp4" />
               Your browser does not support the video tag.
@@ -126,71 +131,157 @@ const Project = () => {
         </div>
 
         <div className="line"></div>
-        <motion.div 
-          className="overview-projet"
+        <motion.div
+          className="context-section"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <div className="texte-projet-cat">Contexte</div>
-          <div
-            className="texte-projet"
-            style={{ color: selectedProject.txtInfos }}
-          >
-            {selectedProject.pageSlider.texte}
+          <div>
+            <div
+              className="texte-projet-bold"
+              style={{ color: selectedProject.txtInfos }}
+            >
+              {selectedProject.pageSlider.texte}
+            </div>
           </div>
         </motion.div>
-        <div className="line"></div>
-        <motion.div 
+
+        <motion.div
           className="overview-projet"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <div className="texte-projet-cat">Challenges et objectifs</div>
           <div className="texte-projet">
             {selectedProject.pageSlider2?.featuresOverview &&
-              selectedProject.pageSlider2.featuresOverview.map((feature, index) => (
-                <motion.div 
-                  key={feature.id} 
-                  style={{ marginBottom: "1rem" }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
-                >
-                  <div
-                    className="texte-projet-title"
-                    style={{
-                      color: selectedProject.txtColor,
-                      marginBottom: "0.5rem",
-                    }}
+              selectedProject.pageSlider2.featuresOverview.map(
+                (feature, index) => (
+                  <motion.div
+                    key={feature.id}
+                    style={{ marginBottom: "1rem" }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                   >
-                    {feature.title}
-                  </div>
-                  <div
-                    style={{ color: selectedProject.txtColor, opacity: 0.8 }}
-                  >
-                    {feature.description}
-                  </div>
-                </motion.div>
-              ))}
+                    <div
+                      className="texte-projet-title"
+                      style={{
+                        color: selectedProject.txtColor,
+                        marginBottom: "0.5rem",
+                      }}
+                    >
+                      {feature.title}
+                    </div>
+                    {feature.formatAsOutline ? (
+                      <div className="format-outline">
+                        {Object.keys(feature.formatAsOutline).map(
+                          (pointKey) => {
+                            const point = feature.formatAsOutline[pointKey];
+                            return (
+                              <div key={pointKey} className="outline-point">
+                                <div className="outline-title">
+                                  {point.title}
+                                </div>
+                                <div
+                                  className="outline-description"
+                                  style={{
+                                    color: selectedProject.txtColor,
+                                    opacity: 0.8,
+                                  }}
+                                >
+                                  {Object.values(point.description).map(
+                                    (sentence, index) => (
+                                      <p key={index}>{sentence}</p>
+                                    )
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          }
+                        )}
+                      </div>
+                    ) : (
+                      <>
+                        <div
+                          className="texte-projet-description"
+                          style={{
+                            color: selectedProject.txtColor,
+                            opacity: 0.8,
+                          }}
+                        >
+                          {feature.description}
+                        </div>
+                        {feature.persona &&
+                          feature.persona.map((persona, index) => (
+                            <div key={index} className="persona-section">
+                              <div
+                                className="persona-description"
+                                style={{
+                                  color: selectedProject.textQuote,
+                                }}
+                              >
+                                "{persona.description}"
+                              </div>
+                              <div
+                                className="persona-presentation"
+                                style={{
+                                  color: selectedProject.textQuote,
+                                }}
+                              >
+                                {persona.presentation}
+                              </div>
+                            </div>
+                          ))}
+                      </>
+                    )}
+                    {feature.image1 && (
+                      <div className="zoning">
+                        <img
+                          src={feature.image1}
+                          alt=""
+                          style={{
+                            width: `${feature.widthImage1}px`,
+                            height: `${feature.heightImage1}px`,
+                          }}
+                        />
+                      </div>
+                    )}
+                    {feature.image2 && (
+                      <div className="mockup">
+                        <img
+                          src={feature.image2}
+                          alt=""
+                          style={{
+                            width: `${feature.widthImage2}px`,
+                            height: `${feature.heightImage2}px`,
+                          }}
+                        />
+                      </div>
+                    )}
+                  </motion.div>
+                )
+              )}
           </div>
           <div
             className="comeback-button"
+            onClick={handleNextProject}
             style={{
               color: selectedProject.txtColor,
               borderColor: selectedProject.txtColor,
+              cursor: "pointer",
             }}
           >
             <div
-              onClick={handleNextProject}
               style={{
                 color: selectedProject.txtColor,
-                cursor: 'pointer'
               }}
             >
-              Projet suivant
+              <span>Projet suivant</span>
             </div>
+            <span>
+              <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
+            </span>
           </div>
         </motion.div>
       </div>
