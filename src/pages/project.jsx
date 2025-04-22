@@ -45,9 +45,9 @@ const Project = () => {
 
   const handleNextProject = () => {
     const nextProject = getNextProject();
+    window.scrollTo({ top: 0, behavior: "instant" });
     updateSelectedProject(nextProject);
     navigate(`/project/${nextProject.projectId}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   if (!selectedProject) {

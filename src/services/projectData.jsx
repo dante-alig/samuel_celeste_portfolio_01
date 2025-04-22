@@ -47,7 +47,9 @@ import openai from "../images/technos/openai.png";
 import figma from "../images/technos/figma.png";
 import react from "../images/technos/react.png";
 import nodeJs from "../images/technos/node.png";
+import nodeJs2 from "../images/technos/node2.png";
 import express from "../images/technos/express.png";
+import express2 from "../images/technos/express2.png";
 import typescript from "../images/technos/typescript.png";
 import typescript2 from "../images/technos/typescript2.png";
 import motion2 from "../images/technos/motion2.png";
@@ -774,7 +776,7 @@ const projectData = [
       "Expo",
     ],
     roles: ["Ui Design", "Dev front & back"],
-    bgColor: "black",
+    bgColor: "#161616",
     txtColor: "#ffffff",
     txtInfos: "grey",
     border: "#ffffff",
@@ -1041,19 +1043,13 @@ const projectData = [
       {
         id: 3,
         name: "Node",
-        logo: nodeJs,
+        logo: nodeJs2,
         url: "#",
       },
       {
         id: 4,
         name: "Express",
-        logo: express,
-        url: "#",
-      },
-      {
-        id: 5,
-        name: "Calendly",
-        logo: google,
+        logo: express2,
         url: "#",
       },
     ],
@@ -1223,7 +1219,7 @@ const projectData = [
     date: "Decembre 2024 - in progress",
     techno: ["React Nativ", "Figma"],
     roles: ["Ux Ui Design", "Dev front & back"],
-    bgColor: "black",
+    bgColor: "#161616",
     txtColor: "#abcc48",
     txtInfos: "grey",
     border: "white",
@@ -1234,7 +1230,7 @@ const projectData = [
       titleSlider: "Yeni",
       subTitle: "/ app mobile",
       texte:
-        "YENI is a platform dedicated to creation, collaboration, and visibility exchange among content creators, artists, influencers, models, and businesses. Its mission is to simplify and streamline collaborations in the audiovisual, creative, and fashion industries by leveraging a model of mutual benefit. At the same time, it enables brands to support their growth in a gradual, creative, and authentic way. However, I cannot disclose the code or the complete project details at this time, as my client wishes to maintain confidentiality.",
+        "YENI est une plateforme dédiée à la création, à la collaboration et à l’échange de visibilité entre créateurs de contenu, artistes, influenceurs, mannequins et entreprises. Sa mission est de simplifier et d’optimiser les collaborations dans les secteurs de l’audiovisuel, de la création et de la mode en s’appuyant sur un modèle d’avantage mutuel. Parallèlement, elle permet aux marques de soutenir leur croissance de manière progressive, créative et authentique. Toutefois, je ne peux pas divulguer le code ni les détails complets du projet pour le moment, car mon client souhaite préserver la confidentialité.",
       imageSlider: YeniPresentation,
       backgroundTextSlider: "#545454",
       textColor: "black",
@@ -1284,9 +1280,9 @@ const projectData = [
       featuresOverview: [
         {
           id: 1,
-          title: "Features Are Confidential",
+          title: "Les fonctionnalités sont confidentielles.",
           description:
-            "This section will be available upon the public release of the application.",
+            "Cette section sera disponible lors de la sortie publique de l’application.",
         },
       ],
     },

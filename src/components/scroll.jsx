@@ -88,9 +88,9 @@ function Scroll() {
   return (
     <section className="parallax-text">
       <ParallaxText baseVelocity={3}>
-        <span className="scroll-point">•</span> remote friendly
-        <span className="scroll-point">•</span>Based in Paris, France
-        <span className="scroll-point">•</span>+10 years experience in design
+        <span className="scroll-point">•</span> Demande d'audit gratuit
+        <span className="scroll-point">•</span>Devis sur mesure
+        <span className="scroll-point">•</span>+10 années d'expériences
       </ParallaxText>
     </section>
   );

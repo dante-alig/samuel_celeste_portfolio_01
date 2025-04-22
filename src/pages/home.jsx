@@ -76,15 +76,15 @@ const Home = ({ parallaxRef }) => {
             <div className="about-container">
               <div className="title-container-bottom">
                 <div className="title-box">
-                  <h1>Nice to meet you,</h1>
-                  <h1> Let’s connect.</h1>
+                  <h1>Parlons</h1>
+                  <h1> de vos projets.</h1>
                 </div>
                 <Link
                   to="https://calendly.com/samuelceleste/appel"
                   target="_blank"
                   className="bookACall"
                 >
-                  Book a call
+                  Réserver un appel
                 </Link>
                 {/* <div className="mail">2025 Dante Design</div> */}
               </div>
