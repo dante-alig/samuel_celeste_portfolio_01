@@ -1612,6 +1612,11 @@ header {
     display: none !important;
   }
 
+  .parallax-text,
+  .parallax {
+    display: none !important;
+  }
+
   .zoning,
   .mockup {
     margin: 1.5rem 0;
