@@ -46,8 +46,10 @@ const Project = () => {
   const handleNextProject = () => {
     const nextProject = getNextProject();
     window.scrollTo({ top: 0, behavior: "instant" });
-    updateSelectedProject(nextProject);
-    navigate(`/project/${nextProject.projectId}`);
+    setTimeout(() => {
+      updateSelectedProject(nextProject);
+      navigate(`/project/${nextProject.projectId}`);
+    }, 50);
   };
 
   if (!selectedProject) {
@@ -69,8 +71,16 @@ const Project = () => {
   }
 
   return (
-    <div className="overview-presentation-container , top-page">
-      <div className="overview-box">
+    <AnimatePresence mode="wait">
+      <motion.div 
+        key={selectedProject.projectId}
+        className="overview-presentation-container top-page"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="overview-box">
         <motion.div
           className="overview-pagination"
           initial={{ opacity: 0, y: 20 }}
@@ -279,7 +289,8 @@ const Project = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   );
 };
 
