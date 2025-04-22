@@ -109,7 +109,7 @@ const Header = ({ parallaxRef }) => {
             Lovely Place
           </motion.div>
           <motion.div
-            className="projects-title projects-title-under hide-mobile"
+            className="projects-title"
             onClick={() => scrollToSection(3.1, "Belami")}
             custom={2}
             variants={projectTitleVariants}
