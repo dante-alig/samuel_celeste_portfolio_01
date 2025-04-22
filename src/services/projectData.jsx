@@ -1213,10 +1213,11 @@ const projectData = [
   {
     pageNumber: "06",
     totalPages: "06",
-    titlePresentation: "Yeni - Connects creators and businesses for seamless.",
+    titlePresentation:
+      "Yeni – Connecte créateurs et entreprises afin de simplifier et optimiser leurs collaborations.",
     title: "Yeni",
     projectId: "yeni",
-    date: "Decembre 2024 - in progress",
+    date: "Décembre 2024",
     techno: ["React Nativ", "Figma"],
     roles: ["Ux Ui Design", "Dev front & back"],
     bgColor: "#161616",
@@ -1230,7 +1231,7 @@ const projectData = [
       titleSlider: "Yeni",
       subTitle: "/ app mobile",
       texte:
-        "YENI est une plateforme dédiée à la création, à la collaboration et à l’échange de visibilité entre créateurs de contenu, artistes, influenceurs, mannequins et entreprises. Sa mission est de simplifier et d’optimiser les collaborations dans les secteurs de l’audiovisuel, de la création et de la mode en s’appuyant sur un modèle d’avantage mutuel. Parallèlement, elle permet aux marques de soutenir leur croissance de manière progressive, créative et authentique. Toutefois, je ne peux pas divulguer le code ni les détails complets du projet pour le moment, car mon client souhaite préserver la confidentialité.",
+        "YENI est une plateforme dédiée à la création, à la collaboration et à l’échange de visibilité entre créateurs de contenu, artistes, influenceurs, mannequins et entreprises. Sa mission est de simplifier et d’optimiser les collaborations dans les secteurs de l’audiovisuel, de la création et de la mode en s’appuyant sur un modèle d’avantage mutuel. Toutefois, je ne peux pas divulguer le code ni les détails complets du projet pour le moment, car mon client souhaite préserver la confidentialité.",
       imageSlider: YeniPresentation,
       backgroundTextSlider: "#545454",
       textColor: "black",
