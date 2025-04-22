@@ -240,10 +240,7 @@ const Project = () => {
                         <img
                           src={feature.image1}
                           alt=""
-                          style={{
-                            width: `${feature.widthImage1}px`,
-                            height: `${feature.heightImage1}px`,
-                          }}
+                          className="project-image"
                         />
                       </div>
                     )}
@@ -252,10 +249,7 @@ const Project = () => {
                         <img
                           src={feature.image2}
                           alt=""
-                          style={{
-                            width: `${feature.widthImage2}px`,
-                            height: `${feature.heightImage2}px`,
-                          }}
+                          className="project-image"
                         />
                       </div>
                     )}

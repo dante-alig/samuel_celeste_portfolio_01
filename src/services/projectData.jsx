@@ -69,7 +69,8 @@ import YeniPresentation from "../images/presentation/yeni.png";
 import ghostPresentation from "../images/presentation/ghost.png";
 
 // ------ project--------
-import lovelyProject from "../images/project/zoning_lovelyplace.png";
+import lovelyProjectMoodboard from "../images/project/zoning_lovelyplace_moodboard.jpg";
+import lovelyProjectZoning from "../images/project/zoning_lovelyplace_zoning.jpg";
 import lovelyProject2 from "../images/project/zoning_lovelyplace2.jpg";
 import lovelyProject3 from "../images/project/zoning_lovelyplace3.png";
 import lovelyProject4 from "../images/project/zoning_lovelyplace4.png";
@@ -77,22 +78,22 @@ import lovelyProject5 from "../images/project/zoning_lovelyplace5.png";
 import lovelyProject6 from "../images/project/zoning_lovelyplace6.png";
 import lovelyProject7 from "../images/project/zoning_lovelyplace7.png";
 import lovelyProject8 from "../images/project/zoning_lovelyplace8.png";
-import marvelProject1 from "../images/project/zoning_lovelyplace3.png";
-import marvelProject2 from "../images/project/zoning_lovelyplace3.png";
-import marvelPrototype1 from "../images/project/zoning_lovelyplace3.png";
-import marvelPrototype2 from "../images/project/zoning_lovelyplace3.png";
-import ghostProject1 from "../images/project/zoning_lovelyplace3.png";
-import ghostProject2 from "../images/project/zoning_lovelyplace3.png";
-import ghostPrototype1 from "../images/project/zoning_lovelyplace3.png";
-import ghostPrototype2 from "../images/project/zoning_lovelyplace3.png";
-import belamiProject1 from "../images/project/zoning_lovelyplace3.png";
-import belamiProject2 from "../images/project/zoning_lovelyplace3.png";
-import belamiPrototype1 from "../images/project/zoning_lovelyplace3.png";
-import belamiPrototype2 from "../images/project/zoning_lovelyplace3.png";
-import therapistProject1 from "../images/project/zoning_lovelyplace3.png";
-import therapistProject2 from "../images/project/zoning_lovelyplace3.png";
-import therapistPrototype1 from "../images/project/zoning_lovelyplace3.png";
-import therapistPrototype2 from "../images/project/zoning_lovelyplace3.png";
+import marvelProject1 from "../images/project/zoning_marvel_moodboard.jpg";
+import marvelProject2 from "../images/project/zoning_marvel_zoning.jpg";
+import marvelPrototype1 from "../images/project/mockup_marvel.png";
+import marvelPrototype2 from "../images/project/zoning_marvel_colors.jpg";
+import ghostProject1 from "../images/project/zoning_ghost_moodboard.jpg";
+import ghostProject2 from "../images/project/zoning_ghost_zoning.jpg";
+import ghostPrototype1 from "../images/project/mockup_ghost.png";
+import ghostPrototype2 from "../images/project/zoning_ghost_colors.jpg";
+import belamiProject1 from "../images/project/zoning_belami_moodboard.jpg";
+import belamiProject2 from "../images/project/zoning_belami_zoning.jpg";
+import belamiPrototype1 from "../images/project/mockup.jpg";
+import belamiPrototype2 from "../images/project/zoning_belami_colors.jpg";
+import therapistProject1 from "../images/project/zoning_karine_moodboard.jpg";
+import therapistProject2 from "../images/project/zoning_karine_zoning.jpg";
+import therapistPrototype1 from "../images/project/mockup_karine.png";
+import therapistPrototype2 from "../images/project/zoning_karine_colors.jpg";
 // ------ mockups--------
 import mockup from "../images/page1/mockup.png";
 import yeniMockup from "../images/mockup_yeni.png";
@@ -449,10 +450,10 @@ const projectData = [
           title: "Inspiration & maquette",
           description:
             "Pour créer Lovely Place, Je me suis inspirés de plateformes comme Netflix, Prime Video et Roblox, reconnues pour leurs outils offrant un environnement sécurisé et adapté aux enfants.",
-          image1: lovelyProject4,
+          image1: lovelyProjectMoodboard,
           widthImage1: "990",
           heightImage1: "600",
-          image2: lovelyProject3,
+          image2: lovelyProjectZoning,
           widthImage2: "990",
           heightImage2: "400",
         },
