@@ -184,12 +184,12 @@ const projectData = [
             {
               description:
                 "Je veux rendre mes soirées entre amis plus excitantes. Nous avons l'habitude de jouer à des jeux de société, mais j'aimerais quelque chose de plus inattendu et interactif — avec des défis amusants ! Je cherche une solution facile d'accès pour pimenter nos rassemblements.",
-              presentation: "Émilie, 27 ans, sociable et créative",
+              presentation: "Émilie, 32 ans, jeune maman ",
             },
             {
               description:
                 "Mes amis et moi cherchons souvent des activités marrantes à faire ensemble, mais il est difficile de trouver des idées uniques. J'aimerais une plateforme où nous pourrions rapidement générer des défis amusants à relever.",
-              presentation: "Lucas, 22 ans, étudiant dynamique",
+              presentation: "Lucas, 22 ans, étudiant",
             },
           ],
         },
@@ -264,7 +264,7 @@ const projectData = [
                 sentence1:
                   "L'utilisation de composants réutilisables a permis une structure propre et un parcours utilisateur simplifié.",
                 sentence2:
-                  "Expérience single-page application (SPA), garantissant une navigation fluide pour les utilisateurs.",
+                  "Expérience single-page application, garantissant une navigation fluide pour les utilisateurs.",
                 sentence3:
                   "Compatibilité avec tous les appareils (desktop, tablette, mobile).",
               },
@@ -451,7 +451,7 @@ const projectData = [
           id: 3,
           title: "Inspiration & maquette",
           description:
-            "Pour créer Lovely Place, Je me suis inspirés de plateformes comme Netflix, Prime Video et Roblox, reconnues pour leurs outils offrant un environnement sécurisé et adapté aux enfants.",
+            "Pour créer Lovely Place, je me suis inspiré de plateformes comme Airbnb ainsi que de sites d’hôtels et de restauration, réputés pour leur capacité à offrir des environnements accueillants, sécurisés et adaptés à leurs utilisateurs.",
           image1: lovelyProjectMoodboard,
           widthImage1: "990",
           heightImage1: "600",
@@ -463,7 +463,7 @@ const projectData = [
           id: 4,
           title: "Prototype",
           description:
-            "La philosophie de conception s'articulait autour d'une simplicité sans effort. Chaque interaction était conçue pour minimiser les frictions et guider naturellement les utilisateurs. tout au long du processus de paiement. Les principes clés comprenaient :",
+            "La philosophie de conception s'articulait autour d'une simplicité sans effort. Chaque interaction était conçue pour minimiser les frictions et guider naturellement les utilisateurs. tout au long du processus de paiement.",
           image1: lovelyProject5,
           widthImage1: "990",
           heightImage1: "600",
@@ -484,8 +484,7 @@ const projectData = [
               description: {
                 sentence1:
                   "React permet une navigation fluide grâce à une gestion optimisée des états.",
-                sentence2:
-                  "Une expérience moderne en single-page application (SPA).",
+                sentence2: "Une expérience moderne en single-page application.",
                 sentence3:
                   "L’adaptabilité à tous les appareils (ordinateur, tablette, mobile).",
               },
@@ -667,7 +666,7 @@ const projectData = [
           id: 3,
           title: "Inspiration & visuels",
           description:
-            "Pour concevoir le projet Marvel, nous avons analysé des interfaces de plateformes interactives favorisant l'exploration facile de leur contenu, à l'image de l'ergonomie de Netflix ou la puissance des interfaces API d'autres géants du domaine.",
+            "Pour concevoir le projet Marvel, je me suis inspiré des interfaces de sites dédiés à l’univers Marvel, en étudiant leurs méthodes de présentation du contenu, leur navigation intuitive et leurs fonctionnalités interactives. Cette analyse m’a permis de proposer une expérience utilisateur cohérente avec les attentes des fans tout en intégrant les meilleures pratiques observées sur ces plateformes spécialisées.",
           image1: marvelProject1,
           widthImage1: "990",
           heightImage1: "600",
@@ -699,10 +698,6 @@ const projectData = [
               description: {
                 sentence1:
                   "Utilisation de composants réutilisables pour une architecture propre et modulable.",
-                sentence2:
-                  "Expérience single-page application (SPA) pour une navigation fluide.",
-                sentence3:
-                  "Site responsive, offrant une compatibilité sur PC, tablettes et mobiles.",
               },
             },
             point2: {
@@ -787,7 +782,7 @@ const projectData = [
       titleSlider: "Belami",
       subTitle: "/ app mobile",
       texte:
-        "Belami est une application mobile conviviale conçue pour aider les utilisateurs à créer des phrases d'accroche personnalisées basées sur les profils des réseaux sociaux. Grâce à des capacités avancées de traitement du langage, elle analyse les profils pour générer des amorces de conversation sur mesure et authentiques. L'application propose également une interface épurée avec diverses options de ton et la possibilité de sauvegarder les phrases préférées. Son approche complète en fait un outil précieux pour les utilisateurs souhaitant établir des connexions sincères.",
+        " Belami est une application mobile destinée à inspirer les hommes sur les applications de rencontre. L’objectif de ce projet était de faciliter la création de phrases d’accroche percutantes à partir des photos de profil des utilisatrices. Grâce à l’intégration de l’intelligence artificielle, l'application analyse chaque photo afin de générer une phrase d’accroche contextuelle et originale. J’ai également développé une fonctionnalité permettant à l’IA de détecter automatiquement le prénom de la personne lorsqu’il apparaît sur l’image, pour l’intégrer directement dans la phrase produite. ",
       imageSlider: belamiPresentation,
       backgroundTextSlider: "#f2e6ca",
       textColor: "black",
@@ -839,19 +834,17 @@ const projectData = [
           id: 1,
           title: "Problématique",
           description:
-            "Belami est une solution innovante face à un défi commun : trouver des phrases d'accroche authentiques et personnalisées pour engager des conversations sur les réseaux sociaux. L'objectif était de développer une application mobile intelligente, capable d'analyser des profils pour suggérer des talents conversationnels uniques, tout en rendant l'expérience simple et agréable pour l'utilisateur.",
+            "Belami est une solution pratique face à un défi rencontré par les hommes sur les sites de rencontre : trouver des phrases d'accroche à la fois engageantes et personnalisées pour lancer des conversations sur Tinder, Hinge, etc. L'objectif était de développer une application mobile intelligente, capable d'analyser les profils afin de suggérer des débuts de conversation uniques, tout en garantissant une expérience simple et agréable pour l'utilisateur.",
           persona: [
             {
               description:
                 "Je trouve difficile de briser la glace sur les applications et réseaux sociaux. J'aimerais qu'une application m'aide à créer des phrases d'accroche adaptées au contenu visible sur le profil, sans avoir l'air générique ou artificiel.",
-              presentation:
-                "Léa, 29 ans, professionnelle active cherchant des connexions authentiques",
+              presentation: "Cédric, 39 ans, ingenieur",
             },
             {
               description:
                 "Je veux me démarquer et éviter les banalités lorsque j'engage des conversations en ligne. Disposer d'une application qui me donne des suggestions originales basées sur les informations des profils serait un véritable avantage.",
-              presentation:
-                "Guillaume, 25 ans, passionné par les interactions en ligne",
+              presentation: "Guillaume, 24 ans, étudiant",
             },
           ],
         },
@@ -866,25 +859,25 @@ const projectData = [
               title: "Analyse de profil :",
               description: {
                 sentence1:
-                  "Traitement optimisé des informations disponibles sur les réseaux sociaux pour relever des points saillants (ex : centre d'intérêt, description personnelle, photos, etc.).",
+                  "Traitement optimisé des informations disponibles sur les photos pour relever les détails à utiliser dans la phrase d’accroche.",
                 sentence2:
-                  "Création d'approches spécifiques basées sur la tonalité et les données pertinentes issues des profils.",
+                  "Création d’approches spécifiques, basées sur la tonalité et les données pertinentes issues des profils.",
               },
             },
             point2: {
               title: "Personnalisation et choix du ton :",
               description: {
                 sentence1:
-                  "L'application propose divers styles de communication : humoristique, poli, inventif ou sérieux.",
+                  "L'application propose divers styles de communication : humoristique, poli, inventif, sérieux...",
                 sentence2:
                   "Les utilisateurs peuvent ajuster le type de phrases d'accroche en fonction de leurs préférences ou des contextes.",
               },
             },
             point3: {
-              title: "Sauvegarde des phrases favorites :",
+              title: "Sauvegarde des discussions :",
               description: {
                 sentence1:
-                  "Possibilité pour l'utilisateur de conserver ses phrases favorites dans une bibliothèque personnelle.",
+                  "Possibilité pour l'utilisateur de conserver les phrases générées dans un historique.",
                 sentence2:
                   "Historique accessible permettant de retrouver des idées passées pour de futures conversations.",
               },
@@ -904,7 +897,7 @@ const projectData = [
           id: 3,
           title: "Inspiration & visuels",
           description:
-            "Pour créer Belami, nous nous sommes inspirés d'outils modernes utilisant le traitement du langage naturel, tels que les générateurs de contenu conversationnel et les plateformes offrant des expériences interactives et simples. L'interface a été pensée pour capturer l'élégance et l'utilité d'applications populaires comme Grammarly ou Tinder, tout en offrant une approche plus personnalisée.",
+            "Pour créer Belami, je me suis inspiré des applications de rencontre et des applications de messagerie en ligne, notamment de leur capacité à faciliter les échanges instantanés et à offrir des expériences utilisateur interactives et intuitives. J'ai conçu l'interface afin de capturer la simplicité d’utilisation et la convivialité de ces plateformes, tout en proposant une approche plus personnalisée.",
           image1: belamiProject1,
           widthImage1: "990",
           heightImage1: "600",
@@ -944,9 +937,9 @@ const projectData = [
               title: "Capacités de traitement du langage naturel (NLP) :",
               description: {
                 sentence1:
-                  "Analyse intelligente des textes de profil grâce à des algorithmes NLP conçus pour détecter des thèmes et créer des phrases adaptées.",
+                  "J'ai utilisé des Large Language Models (LLM), pour analyser intelligemment les photos de profil.",
                 sentence2:
-                  "Utilisation de bibliothèques d'intelligence artificielle comme TensorFlow ou SpaCy pour maximiser la pertinence des suggestions.",
+                  "Grâce à ces technologies, il est possible d’identifier automatiquement des thèmes ou objets dans les images pour générer des descriptions personnalisées.",
               },
             },
             point3: {
@@ -959,12 +952,12 @@ const projectData = [
               },
             },
             point4: {
-              title: "Base de données MongoDB scalable :",
+              title: "Base de données interne au mobile :",
               description: {
                 sentence1:
-                  "Stockage structuré et flexible des données liés aux utilisateurs, telles que leurs préférences de ton ou leurs phrases favorites.",
+                  "Stockage structuré et flexible de l’historique des conversations directement sur l’appareil de l’utilisateur.",
                 sentence2:
-                  "Performance optimisée pour permettre une gestion rapide des suggestions personnalisées.",
+                  "Toutes les données restent localisées sur le mobile, ce qui garantit la confidentialité et le respect de la vie privée.",
               },
             },
           },
@@ -1067,8 +1060,7 @@ const projectData = [
             {
               description:
                 "Je suis thérapeute et j'ai besoin d'un site professionnel qui informe efficacement mes patients potentiels sur mes services et leur permet de me contacter facilement. Il est important que mon site dégage une impression de simplicité, de calme et de clarté.",
-              presentation:
-                "Claire, 42 ans, thérapeute spécialisée en thérapies holistiques",
+              presentation: "Karine, 42 ans, thérapeute",
             },
             {
               description:
@@ -1089,17 +1081,13 @@ const projectData = [
               description: {
                 sentence1:
                   "Une page dédiée à la présentation des différentes méthodes thérapeutiques et des spécialités du praticien, illustrant ses compétences et expériences.",
-                sentence2:
-                  "Une section claire expliquant les bénéfices des thérapies et répondant aux principales questions des patients.",
               },
             },
             point2: {
               title: "Prise de contact simplifiée :",
               description: {
                 sentence1:
-                  "Un formulaire de contact directement intégré au site, permettant aux utilisateurs de poser leurs questions ou de demander un rendez-vous.",
-                sentence2:
-                  "Des champs de formulaire validés en TypeScript pour garantir des données fiables (e-mail valide, champs obligatoires, etc.).",
+                  "Un agenda en ligne via Calendly intégré au site, permettant aux utilisateurs de prendre facilement rendez-vous selon leurs disponibilités.",
               },
             },
             point3: {
@@ -1164,15 +1152,7 @@ const projectData = [
                   "Gestion des états facilitée pour offrir une expérience fluide et dynamique aux visiteurs.",
               },
             },
-            point3: {
-              title: "Node.js et Express.js pour la gestion backend :",
-              description: {
-                sentence1:
-                  "Mise en place d'un backend léger pour gérer les requêtes issues des formulaires de contact.",
-                sentence2:
-                  "Validation côté serveur des données utilisateurs pour garantir une mesure de sécurité supplémentaire.",
-              },
-            },
+
             point4: {
               title: "Responsivité avec CSS :",
               description: {
