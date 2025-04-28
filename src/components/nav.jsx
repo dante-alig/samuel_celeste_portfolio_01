@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import profil from "../images/profil.jpg";
-import Drawer from "./drawer";
 import { Link, useLocation } from "react-router-dom";
 
 const Nav = ({ parallaxRef }) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const location = useLocation();
 
   const scrollToSection = (offset) => {
@@ -98,12 +96,14 @@ const Nav = ({ parallaxRef }) => {
             <NavLink onClick={handleWorkClick}>Projets</NavLink>
           </Link>
         )}
-        <NavLink onClick={() => setIsDrawerOpen(true)}>Infos</NavLink>
+        <Link to="/services" style={{ textDecoration: "none", color: "inherit" }}>
+          <NavLink>Services</NavLink>
+        </Link>
         <NavLink href="https://calendly.com/samuelceleste/appel">
           Contact
         </NavLink>
       </nav>
-      <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
+
     </div>
   );
 };
