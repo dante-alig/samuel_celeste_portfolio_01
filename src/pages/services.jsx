@@ -14,11 +14,17 @@ import {
   FaMoneyBillWave,
   FaGift,
   FaCrown,
+  FaPlus,
 } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState("solution web");
+  const [activeFaq, setActiveFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
 
   return (
     <>
@@ -205,7 +211,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous souhaitez offrir une expérience mobile native à vos utilisateurs
+                Vous souhaitez offrir une expérience mobile native à vos
+                utilisateurs
               </motion.li>
               <motion.li
                 variants={{
@@ -221,8 +228,9 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous avez besoin de fonctionnalités avancées comme les notifications push,
-                la géolocalisation ou l'accès à l'appareil photo
+                Vous avez besoin de fonctionnalités avancées comme les
+                notifications push, la géolocalisation ou l'accès à l'appareil
+                photo
               </motion.li>
               <motion.li
                 variants={{
@@ -239,7 +247,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous souhaitez une application qui fonctionne même hors connexion
+                Vous souhaitez une application qui fonctionne même hors
+                connexion
               </motion.li>
             </motion.ul>
           </motion.div>
@@ -277,7 +286,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous souhaitez automatiser des tâches répétitives pour gagner du temps
+                Vous souhaitez automatiser des tâches répétitives pour gagner du
+                temps
               </motion.li>
               <motion.li
                 variants={{
@@ -397,8 +407,8 @@ const Services = () => {
             <h3>Proposition d'offre</h3>
             <p>
               Je vous fais une proposition de devis personnalisé. Si c’est la
-              première fois que nous travaillons ensemble, vous bénéficiez de
-              15% de remise sur ce devis.
+              première fois que nous travaillons ensemble, vous bénéficiez d'une
+              remise sur ce devis.
             </p>
           </motion.div>
 
@@ -419,8 +429,8 @@ const Services = () => {
             </motion.div>
             <h3>Validation</h3>
             <p>
-              On s'appelle pour valider l'offre, déterminer le calendrier et les
-              étapes du paiement puis la mission démare.
+              On valider l'offre, détermine le calendrier et les étapes du
+              paiement puis la mission démare.
             </p>
           </motion.div>
         </motion.div>
@@ -656,10 +666,10 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              "Des questions ou envie de passer à l'action ? Réservez un appel
-              directement avec moi, sans engagement, pour échanger sur votre
-              activité. Nous identifierons ensemble vos besoins et découvrirons
-              comment automatiser votre business pour gagner du temps et booster vos ventes."
+              "Réservez un appel 100% gratuit et sans engagement, pour échanger
+              sur votre activité. Nous identifierons ensemble vos besoins et
+              découvrirons comment automatiser votre business pour gagner du
+              temps et booster vos ventes."
             </motion.p>
             <motion.button
               className="contact-button"
@@ -950,6 +960,128 @@ const Services = () => {
               besoins business fait toute la différence. Notre site performe
               au-delà de nos attentes !
             </motion.p>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className="faq-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Questions fréquentes
+        </motion.h2>
+        <motion.div
+          className="faq-grid"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(0)}>
+              <h3>Combien coûte un projet web ou mobile ?</h3>
+              <FaPlus className={`faq-icon ${activeFaq === 0 ? 'open' : ''}`} />
+            </div>
+            <div className="faq-answer" style={{ display: activeFaq === 0 ? 'block' : 'none' }}>
+              Chaque projet est unique et le prix varie en fonction de vos besoins spécifiques.
+              Je vous propose un devis personnalisé après notre premier échange pour comprendre
+              précisément vos objectifs et l'envergure du projet.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(1)}>
+              <h3>Combien de temps faut-il pour réaliser mon projet ?</h3>
+              <FaPlus className={`faq-icon ${activeFaq === 1 ? 'open' : ''}`} />
+            </div>
+            <div className="faq-answer" style={{ display: activeFaq === 1 ? 'block' : 'none' }}>
+              La durée dépend de la complexité du projet. En général, un site web prend
+              entre 4 et 8 semaines, une application mobile entre 8 et 12 semaines. Un
+              calendrier détaillé vous sera fourni lors de notre première discussion.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(2)}>
+              <h3>Comment se déroule la collaboration ?</h3>
+              <FaPlus className={`faq-icon ${activeFaq === 2 ? 'open' : ''}`} />
+            </div>
+            <div className="faq-answer" style={{ display: activeFaq === 2 ? 'block' : 'none' }}>
+              La collaboration se fait en plusieurs étapes : analyse de vos besoins,
+              proposition personnalisée, développement par phases avec des points
+              réguliers, tests, et mise en production. Vous êtes impliqué à chaque
+              étape pour garantir que le résultat correspond à vos attentes.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(3)}>
+              <h3>Proposez-vous un suivi après la mise en ligne ?</h3>
+              <FaPlus className={`faq-icon ${activeFaq === 3 ? 'open' : ''}`} />
+            </div>
+            <div className="faq-answer" style={{ display: activeFaq === 3 ? 'block' : 'none' }}>
+              Oui, je propose un suivi post-lancement pour assurer le bon fonctionnement
+              de votre solution. Des forfaits de maintenance sont disponibles pour
+              garantir la pérennité et l'évolution de votre projet.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(4)}>
+              <h3>Quelles technologies utilisez-vous ?</h3>
+              <FaPlus className={`faq-icon ${activeFaq === 4 ? 'open' : ''}`} />
+            </div>
+            <div className="faq-answer" style={{ display: activeFaq === 4 ? 'block' : 'none' }}>
+              J'utilise les technologies les plus modernes et adaptées à chaque projet :
+              React, Next.js, Node.js pour le web, React Native pour les applications
+              mobiles, et diverses solutions d'IA comme OpenAI et TensorFlow pour
+              l'automatisation.
+            </div>
           </motion.div>
         </motion.div>
       </motion.div>
