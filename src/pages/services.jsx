@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/services.css";
 import profil from "../images/profil.png";
 import { motion } from "framer-motion";
+import Modal from "react-modal";
 import {
   FaDollarSign,
   FaBriefcase,
@@ -15,12 +16,17 @@ import {
   FaGift,
   FaCrown,
   FaPlus,
+  FaTimes,
 } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
+import { useCalendly } from "../context/CalendlyContext";
+
+Modal.setAppElement("#root");
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState("solution web");
   const [activeFaq, setActiveFaq] = useState(null);
+  const { isModalOpen, openCalendlyModal, closeCalendlyModal } = useCalendly();
 
   const toggleFaq = (index) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -94,7 +100,7 @@ const Services = () => {
             className={`tab ${activeTab === "mobile app" ? "active" : ""}`}
             onClick={() => setActiveTab("mobile app")}
           >
-            Application mobile
+            MVP & App Mobile
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -155,7 +161,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous voulez gagner plus rapidement de nouveaux clients
+                Vous souhaitez acquérir plus rapidement de nouveaux clients et
+                augmenter votre chiffre d'affaires.
               </motion.li>
               <motion.li
                 variants={{
@@ -163,8 +170,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous souhaitez éviter de perdre du temps (et donc de l'argent) à
-                maintenir votre site web
+                Vous souhaitez éviter les erreurs coûteuses d'une conception web
+                non professionnelle, sources de perte de temps et d’argent.
               </motion.li>
               <motion.li
                 variants={{
@@ -211,8 +218,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous souhaitez offrir une expérience mobile native à vos
-                utilisateurs
+                Vous êtes une startup et vous souhaitez valider rapidement votre
+                concept avec un MVP (Minimum Viable Product)
               </motion.li>
               <motion.li
                 variants={{
@@ -220,7 +227,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous voulez une application disponible sur iOS et Android
+                Vous avez besoin d'une première version fonctionnelle de votre
+                application pour lever des fonds
               </motion.li>
               <motion.li
                 variants={{
@@ -228,9 +236,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous avez besoin de fonctionnalités avancées comme les
-                notifications push, la géolocalisation ou l'accès à l'appareil
-                photo
+                Vous cherchez un développeur capable de créer rapidement un
+                produit de A à Z avec les technologies modernes
               </motion.li>
               <motion.li
                 variants={{
@@ -238,8 +245,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous cherchez à fidéliser votre clientèle avec une application
-                performante et intuitive
+                Vous voulez une application évolutive qui pourra s'adapter aux
+                retours de vos premiers utilisateurs
               </motion.li>
               <motion.li
                 variants={{
@@ -247,8 +254,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous souhaitez une application qui fonctionne même hors
-                connexion
+                Vous souhaitez un accompagnement technique pour définir les
+                fonctionnalités essentielles de votre MVP
               </motion.li>
             </motion.ul>
           </motion.div>
@@ -286,8 +293,8 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous souhaitez automatiser des tâches répétitives pour gagner du
-                temps
+                Vous aimeriez gagner 1, 2, 3, 4 heures, voire plus, chaque jour
+                dans votre travail
               </motion.li>
               <motion.li
                 variants={{
@@ -304,8 +311,7 @@ const Services = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous cherchez à optimiser vos processus métier grâce à
-                l'intelligence artificielle
+                Vous voulez rendre votre travail plus efficace grâce à l’IA.
               </motion.li>
               <motion.li
                 variants={{
@@ -380,7 +386,7 @@ const Services = () => {
               apporter de la valeur.
             </p>
             <motion.a
-              href="https://calendly.com/samuelceleste/appel"
+              onClick={openCalendlyModal}
               className="step-button"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -679,6 +685,7 @@ const Services = () => {
               transition={{ duration: 0.5, delay: 0.8 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={openCalendlyModal}
             >
               Me contacter
             </motion.button>
@@ -1001,12 +1008,16 @@ const Services = () => {
           >
             <div className="faq-question" onClick={() => toggleFaq(0)}>
               <h3>Combien coûte un projet web ou mobile ?</h3>
-              <FaPlus className={`faq-icon ${activeFaq === 0 ? 'open' : ''}`} />
+              <FaPlus className={`faq-icon ${activeFaq === 0 ? "open" : ""}`} />
             </div>
-            <div className="faq-answer" style={{ display: activeFaq === 0 ? 'block' : 'none' }}>
-              Chaque projet est unique et le prix varie en fonction de vos besoins spécifiques.
-              Je vous propose un devis personnalisé après notre premier échange pour comprendre
-              précisément vos objectifs et l'envergure du projet.
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 0 ? "block" : "none" }}
+            >
+              Chaque projet est unique et le prix varie en fonction de vos
+              besoins spécifiques. Je vous propose un devis personnalisé après
+              notre premier échange pour comprendre précisément vos objectifs et
+              l'envergure du projet.
             </div>
           </motion.div>
 
@@ -1019,12 +1030,16 @@ const Services = () => {
           >
             <div className="faq-question" onClick={() => toggleFaq(1)}>
               <h3>Combien de temps faut-il pour réaliser mon projet ?</h3>
-              <FaPlus className={`faq-icon ${activeFaq === 1 ? 'open' : ''}`} />
+              <FaPlus className={`faq-icon ${activeFaq === 1 ? "open" : ""}`} />
             </div>
-            <div className="faq-answer" style={{ display: activeFaq === 1 ? 'block' : 'none' }}>
-              La durée dépend de la complexité du projet. En général, un site web prend
-              entre 4 et 8 semaines, une application mobile entre 8 et 12 semaines. Un
-              calendrier détaillé vous sera fourni lors de notre première discussion.
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 1 ? "block" : "none" }}
+            >
+              La durée dépend de la complexité du projet. En général, un site
+              web prend entre 4 et 8 semaines, une application mobile entre 8 et
+              12 semaines. Un calendrier détaillé vous sera fourni lors de notre
+              première discussion.
             </div>
           </motion.div>
 
@@ -1037,13 +1052,17 @@ const Services = () => {
           >
             <div className="faq-question" onClick={() => toggleFaq(2)}>
               <h3>Comment se déroule la collaboration ?</h3>
-              <FaPlus className={`faq-icon ${activeFaq === 2 ? 'open' : ''}`} />
+              <FaPlus className={`faq-icon ${activeFaq === 2 ? "open" : ""}`} />
             </div>
-            <div className="faq-answer" style={{ display: activeFaq === 2 ? 'block' : 'none' }}>
-              La collaboration se fait en plusieurs étapes : analyse de vos besoins,
-              proposition personnalisée, développement par phases avec des points
-              réguliers, tests, et mise en production. Vous êtes impliqué à chaque
-              étape pour garantir que le résultat correspond à vos attentes.
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 2 ? "block" : "none" }}
+            >
+              La collaboration se fait en plusieurs étapes : analyse de vos
+              besoins, proposition personnalisée, développement par phases avec
+              des points réguliers, tests, et mise en production. Vous êtes
+              impliqué à chaque étape pour garantir que le résultat correspond à
+              vos attentes.
             </div>
           </motion.div>
 
@@ -1056,12 +1075,16 @@ const Services = () => {
           >
             <div className="faq-question" onClick={() => toggleFaq(3)}>
               <h3>Proposez-vous un suivi après la mise en ligne ?</h3>
-              <FaPlus className={`faq-icon ${activeFaq === 3 ? 'open' : ''}`} />
+              <FaPlus className={`faq-icon ${activeFaq === 3 ? "open" : ""}`} />
             </div>
-            <div className="faq-answer" style={{ display: activeFaq === 3 ? 'block' : 'none' }}>
-              Oui, je propose un suivi post-lancement pour assurer le bon fonctionnement
-              de votre solution. Des forfaits de maintenance sont disponibles pour
-              garantir la pérennité et l'évolution de votre projet.
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 3 ? "block" : "none" }}
+            >
+              Oui, je propose un suivi post-lancement pour assurer le bon
+              fonctionnement de votre solution. Des forfaits de maintenance sont
+              disponibles pour garantir la pérennité et l'évolution de votre
+              projet.
             </div>
           </motion.div>
 
@@ -1074,17 +1097,197 @@ const Services = () => {
           >
             <div className="faq-question" onClick={() => toggleFaq(4)}>
               <h3>Quelles technologies utilisez-vous ?</h3>
-              <FaPlus className={`faq-icon ${activeFaq === 4 ? 'open' : ''}`} />
+              <FaPlus className={`faq-icon ${activeFaq === 4 ? "open" : ""}`} />
             </div>
-            <div className="faq-answer" style={{ display: activeFaq === 4 ? 'block' : 'none' }}>
-              J'utilise les technologies les plus modernes et adaptées à chaque projet :
-              React, Next.js, Node.js pour le web, React Native pour les applications
-              mobiles, et diverses solutions d'IA comme OpenAI et TensorFlow pour
-              l'automatisation.
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 4 ? "block" : "none" }}
+            >
+              J'utilise les technologies les plus modernes et adaptées à chaque
+              projet : React, Next.js, Node.js pour le web, React Native pour
+              les applications mobiles, et diverses solutions d'IA comme OpenAI
+              et TensorFlow pour l'automatisation.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(5)}>
+              <h3>
+                Pouvez-vous travailler à distance ou uniquement sur site ?
+              </h3>
+              <FaPlus className={`faq-icon ${activeFaq === 5 ? "open" : ""}`} />
+            </div>
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 5 ? "block" : "none" }}
+            >
+              Je travaille essentiellement à distance, mais je peux également me
+              déplacer si nécessaire pour certaines missions.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(6)}>
+              <h3>
+                Pouvez-vous améliorer l'ergonomie ou le design d'un site/app
+                existant ?
+              </h3>
+              <FaPlus className={`faq-icon ${activeFaq === 6 ? "open" : ""}`} />
+            </div>
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 6 ? "block" : "none" }}
+            >
+              Oui, j'interviens aussi bien sur des créations que sur des
+              refontes pour améliorer l'ergonomie, l'accessibilité et le design.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(7)}>
+              <h3>
+                Est-ce que vous assurez la maintenance des projets après
+                livraison ?
+              </h3>
+              <FaPlus className={`faq-icon ${activeFaq === 7 ? "open" : ""}`} />
+            </div>
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 7 ? "block" : "none" }}
+            >
+              Oui, j'offre différents forfaits de maintenance pour assurer les
+              mises à jour, la sécurité et le support technique.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(8)}>
+              <h3>Quelles sortes d'automatisations proposez-vous ?</h3>
+              <FaPlus className={`faq-icon ${activeFaq === 8 ? "open" : ""}`} />
+            </div>
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 8 ? "block" : "none" }}
+            >
+              J'automatise des tâches répétitives (emails, gestion de données,
+              reporting, veille, etc.) à l'aide de scripts, IA ou plateformes
+              comme Zapier, Make ou des API personnalisées.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(9)}>
+              <h3>
+                Proposez-vous une formation à la prise en main du site ou de
+                l'application ?
+              </h3>
+              <FaPlus className={`faq-icon ${activeFaq === 9 ? "open" : ""}`} />
+            </div>
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 9 ? "block" : "none" }}
+            >
+              Oui, je peux prévoir une session de formation (en visioconférence
+              ou vidéo) pour faciliter la prise en main de votre solution.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(10)}>
+              <h3>Que se passe-t-il en cas de bug après la livraison ?</h3>
+              <FaPlus
+                className={`faq-icon ${activeFaq === 10 ? "open" : ""}`}
+              />
+            </div>
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 10 ? "block" : "none" }}
+            >
+              Je propose une garantie sur les corrections de bugs pendant une
+              période définie. Des forfaits de maintenance sont aussi
+              disponibles.
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="faq-item"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="faq-question" onClick={() => toggleFaq(11)}>
+              <h3>Puis-je vous confier un projet urgent ?</h3>
+              <FaPlus
+                className={`faq-icon ${activeFaq === 11 ? "open" : ""}`}
+              />
+            </div>
+            <div
+              className="faq-answer"
+              style={{ display: activeFaq === 11 ? "block" : "none" }}
+            >
+              Selon mes disponibilités, je peux accepter des projets urgents.
+              N'hésitez pas à me contacter pour en discuter.
             </div>
           </motion.div>
         </motion.div>
       </motion.div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeCalendlyModal}
+        className="calendly-modal"
+        overlayClassName="calendly-modal-overlay"
+      >
+        <button
+          className="modal-close-button"
+          onClick={closeCalendlyModal}
+        >
+          <FaTimes />
+        </button>
+        <iframe
+          src="https://calendly.com/samuelceleste/appel"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+        ></iframe>
+      </Modal>
     </>
   );
 };

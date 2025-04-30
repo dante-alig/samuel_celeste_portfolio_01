@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import profil from "../images/profil.jpg";
 import { Link, useLocation } from "react-router-dom";
+import { useCalendly } from "../context/CalendlyContext";
 
 const Nav = ({ parallaxRef }) => {
   const location = useLocation();
+  const { openCalendlyModal } = useCalendly();
 
   const scrollToSection = (offset) => {
     if (parallaxRef?.current) {
@@ -84,7 +86,7 @@ const Nav = ({ parallaxRef }) => {
         <div>
           <img src={profil} />
         </div>
-        <div className="profil-name">Dante</div>
+        <div className="profil-name">Dante ©</div>
       </div>
 
       {/* ----- Navigation--------- */}
@@ -96,14 +98,14 @@ const Nav = ({ parallaxRef }) => {
             <NavLink onClick={handleWorkClick}>Projets</NavLink>
           </Link>
         )}
-        <Link to="/services" style={{ textDecoration: "none", color: "inherit" }}>
+        <Link
+          to="/services"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           <NavLink>Services</NavLink>
         </Link>
-        <NavLink href="https://calendly.com/samuelceleste/appel">
-          Contact
-        </NavLink>
+        <NavLink onClick={openCalendlyModal}>Contact</NavLink>
       </nav>
-
     </div>
   );
 };

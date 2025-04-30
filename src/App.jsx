@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useRef } from "react";
 import { ProjectProvider } from "./context/ProjectContext";
+import { CalendlyProvider } from "./context/CalendlyContext";
 
 library.add(faArrowUpRightFromSquare, faArrowRight);
 
@@ -19,14 +20,18 @@ function App() {
 
   return (
     <ProjectProvider>
-      <Router>
-        <Nav parallaxRef={parallax} />
-        <Routes>
-          <Route path="/" element={<Home parallaxRef={parallax} />} />
-          <Route path="/project/:id" element={<Project />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
-      </Router>
+      <CalendlyProvider>
+        <Router>
+          <div className="App">
+            <Nav parallaxRef={parallax} />
+            <Routes>
+              <Route path="/" element={<Home parallaxRef={parallax} />} />
+              <Route path="/project/:id" element={<Project />} />
+              <Route path="/services" element={<Services />} />
+            </Routes>
+          </div>
+        </Router>
+      </CalendlyProvider>
     </ProjectProvider>
   );
 }
