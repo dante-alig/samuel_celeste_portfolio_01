@@ -22,20 +22,20 @@ const Services = () => {
 
   return (
     <>
-      <motion.div 
+      <motion.div
         className="services-container"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <motion.div 
+        <motion.div
           className="services-header"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
           <div className="header-content">
-            <motion.div 
+            <motion.div
               className="profile-image"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -43,7 +43,7 @@ const Services = () => {
             >
               <img src={profil} alt="Profile" />
             </motion.div>
-            <motion.div 
+            <motion.div
               className="header-text"
               initial={{ x: -30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -68,7 +68,7 @@ const Services = () => {
           </motion.p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="services-tabs"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -101,7 +101,7 @@ const Services = () => {
         </motion.div>
 
         {activeTab === "solution web" && (
-          <motion.div 
+          <motion.div
             className="service-content"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,30 +114,22 @@ const Services = () => {
             >
               L'offre web est faites pour vous si :
             </motion.h3>
-            <motion.ul 
+            <motion.ul
               className="service-list"
               initial="hidden"
               animate="visible"
               variants={{
                 visible: {
                   transition: {
-                    staggerChildren: 0.1
-                  }
-                }
+                    staggerChildren: 0.1,
+                  },
+                },
               }}
             >
               <motion.li
                 variants={{
                   hidden: { opacity: 0, x: -20 },
-                  visible: { opacity: 1, x: 0 }
-                }}
-              >
-                Vous êtes un entrepreneur indépendant ou une PME
-              </motion.li>
-              <motion.li
-                variants={{
-                  hidden: { opacity: 0, x: -20 },
-                  visible: { opacity: 1, x: 0 }
+                  visible: { opacity: 1, x: 0 },
                 }}
               >
                 Vous souhaitez un site web ou un tunnel de vente qui reflète
@@ -146,35 +138,189 @@ const Services = () => {
               <motion.li
                 variants={{
                   hidden: { opacity: 0, x: -20 },
-                  visible: { opacity: 1, x: 0 }
+                  visible: { opacity: 1, x: 0 },
                 }}
               >
-                Vous voulez gagner rapidement de nouveaux clients
+                Vous êtes un entrepreneur indépendant ou une PME
               </motion.li>
               <motion.li
                 variants={{
                   hidden: { opacity: 0, x: -20 },
-                  visible: { opacity: 1, x: 0 }
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous voulez gagner plus rapidement de nouveaux clients
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
                 }}
               >
                 Vous souhaitez éviter de perdre du temps (et donc de l'argent) à
-                développer vous-même votre site web ou votre tunnel de vente.
+                maintenir votre site web
               </motion.li>
               <motion.li
                 variants={{
                   hidden: { opacity: 0, x: -20 },
-                  visible: { opacity: 1, x: 0 }
+                  visible: { opacity: 1, x: 0 },
                 }}
               >
                 Vous voulez profiter des solutions les plus efficaces et les
-                plus modernes du marché
+                mieux adaptées à votre activité
+              </motion.li>
+            </motion.ul>
+          </motion.div>
+        )}
+
+        {activeTab === "mobile app" && (
+          <motion.div
+            className="service-content"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              L'offre application mobile est faite pour vous si :
+            </motion.h3>
+            <motion.ul
+              className="service-list"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.1,
+                  },
+                },
+              }}
+            >
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous souhaitez offrir une expérience mobile native à vos utilisateurs
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous voulez une application disponible sur iOS et Android
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous avez besoin de fonctionnalités avancées comme les notifications push,
+                la géolocalisation ou l'accès à l'appareil photo
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous cherchez à fidéliser votre clientèle avec une application
+                performante et intuitive
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous souhaitez une application qui fonctionne même hors connexion
+              </motion.li>
+            </motion.ul>
+          </motion.div>
+        )}
+
+        {activeTab === "automatisation" && (
+          <motion.div
+            className="service-content"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              L'offre d'automatisation IA est faite pour vous si :
+            </motion.h3>
+            <motion.ul
+              className="service-list"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.1,
+                  },
+                },
+              }}
+            >
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous souhaitez automatiser des tâches répétitives pour gagner du temps
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous voulez intégrer l'IA pour améliorer l'expérience client
+                (chatbots, recommandations personnalisées)
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous cherchez à optimiser vos processus métier grâce à
+                l'intelligence artificielle
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous souhaitez analyser automatiquement vos données pour prendre
+                de meilleures décisions
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                Vous voulez rester compétitif en adoptant les dernières
+                technologies d'IA
               </motion.li>
             </motion.ul>
           </motion.div>
         )}
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="methode-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -189,7 +335,7 @@ const Services = () => {
         >
           Méthode de travail
         </motion.h2>
-        <motion.div 
+        <motion.div
           className="methode-steps"
           initial="hidden"
           whileInView="visible"
@@ -197,20 +343,20 @@ const Services = () => {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.2
-              }
-            }
+                staggerChildren: 0.2,
+              },
+            },
           }}
         >
-          <motion.div 
+          <motion.div
             className="methode-step"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
+            <motion.div
               className="step-circle"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400 }}
@@ -233,15 +379,15 @@ const Services = () => {
             </motion.a>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="methode-step"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
+            <motion.div
               className="step-circle"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400 }}
@@ -250,20 +396,21 @@ const Services = () => {
             </motion.div>
             <h3>Proposition d'offre</h3>
             <p>
-              Je vous fait une proposition de devis personnalisé. Chaque détails
-              est présent tout est transparent.
+              Je vous fais une proposition de devis personnalisé. Si c’est la
+              première fois que nous travaillons ensemble, vous bénéficiez de
+              15% de remise sur ce devis.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="methode-step"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
+            <motion.div
               className="step-circle"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400 }}
@@ -279,7 +426,7 @@ const Services = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="why-choose-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -294,7 +441,7 @@ const Services = () => {
         >
           Pourquoi me choisir
         </motion.h2>
-        <motion.div 
+        <motion.div
           className="why-choose-grid"
           initial="hidden"
           whileInView="visible"
@@ -302,22 +449,20 @@ const Services = () => {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.1
-              }
-            }
+                staggerChildren: 0.1,
+              },
+            },
           }}
         >
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
               <GiReceiveMoney className="why-choose-icon" />
             </motion.div>
             <h3>Satisfait ou remboursé</h3>
@@ -327,38 +472,15 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
-              <FaGift className="why-choose-icon" />
-            </motion.div>
-            <h3>Ressources et zoning offert</h3>
-            <p>
-              Démarrage facilité : recevez gratuitement un zoning clair et des
-              ressources précieuses pour bien démarrer votre projet dès le
-              départ.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="why-choose-item"
-            variants={{
-              hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
               <FaCrown className="why-choose-icon" />
             </motion.div>
             <h3>Tarif préférentiel pour notre première collaboration</h3>
@@ -368,39 +490,52 @@ const Services = () => {
               bases.
             </p>
           </motion.div>
-
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
+              <FaGift className="why-choose-icon" />
+            </motion.div>
+            <h3>Zoning offert</h3>
+            <p>
+              Démarrage facilité : je vous offre une prévisualisation de
+              l’organisation de votre site web, pour que vous puissiez déjà
+              l’imaginer et vous projeter.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="why-choose-item"
+            variants={{
+              hidden: { opacity: 0, scale: 0.8 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div className="icon-container">
               <FaBriefcase className="why-choose-icon" />
             </motion.div>
             <h3>Expérience éprouvée</h3>
             <p>
-              Expertise reconnue : bénéficiez de l'expérience d'un
-              designer/développeur qui a accompagné de nombreux entrepreneurs et
-              entreprises vers le succès digital.
+              Expertise reconnue : bénéficiez de 10 ans d’expérience au service
+              de la réussite digitale de nombreux clients.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
               <FaCogs className="why-choose-icon" />
             </motion.div>
             <h3>Interfaces esthétiques</h3>
@@ -411,17 +546,15 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
               <FaCode className="why-choose-icon" />
             </motion.div>
             <h3>Solutions sur-mesure</h3>
@@ -431,58 +564,51 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
               <FaUserClock className="why-choose-icon" />
             </motion.div>
-            <h3>Contact direct h24 7/7</h3>
+            <h3>Contact direct 24/7</h3>
             <p>
               Disponibilité totale : joignez-moi à tout moment pour un suivi
               réactif et sans intermédiaires, même le week-end.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
               <FaChartLine className="why-choose-icon" />
             </motion.div>
             <h3>Optimisation SEO & performance</h3>
             <p>
-              Tous mes sites sont optimisés pour un chargement rapide et une
-              bonne visibilité sur Google. L'objectif ? Booster votre présence
-              en ligne !
+              Performance & Visibilité : tous mes sites sont optimisés pour un
+              chargement rapide et une bonne visibilité sur Google.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="why-choose-item"
             variants={{
               hidden: { opacity: 0, scale: 0.8 },
-              visible: { opacity: 1, scale: 1 }
+              visible: { opacity: 1, scale: 1 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              className="icon-container"
-            >
+            <motion.div className="icon-container">
               <FaMoneyBillWave className="why-choose-icon" />
             </motion.div>
             <h3>Plus de valeur, moins de dépenses</h3>
@@ -494,21 +620,21 @@ const Services = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="contact-block"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <motion.div 
+        <motion.div
           className="contact-content"
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, type: "spring", stiffness: 100 }}
         >
-          <motion.div 
+          <motion.div
             className="profile-image"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -517,7 +643,7 @@ const Services = () => {
           >
             <img src={profil} alt="Profile" />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="contact-text"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -530,12 +656,12 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              "I am a passionate graphic designer with more than 10 years of
-              experience, now transitioning into full-stack development. My
-              portfolio features personal projects I've fully designed and
-              coded, combining my design expertise with new technical skills."
+              "Des questions ou envie de passer à l'action ? Réservez un appel
+              directement avec moi, sans engagement, pour échanger sur votre
+              activité. Nous identifierons ensemble vos besoins et découvrirons
+              comment automatiser votre business pour gagner du temps et booster vos ventes."
             </motion.p>
-            <motion.button 
+            <motion.button
               className="contact-button"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -550,7 +676,7 @@ const Services = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="testimonials-section"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -565,7 +691,7 @@ const Services = () => {
         >
           Ceux qui m'ont fait confiance
         </motion.h1>
-        <motion.div 
+        <motion.div
           className="testimonials-slider"
           initial="hidden"
           whileInView="visible"
@@ -573,40 +699,40 @@ const Services = () => {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.2
-              }
-            }
+                staggerChildren: 0.2,
+              },
+            },
           }}
         >
-          <motion.div 
+          <motion.div
             className="testimonial-card"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
-            transition={{ 
+            transition={{
               duration: 0.5,
               type: "spring",
-              stiffness: 100
+              stiffness: 100,
             }}
           >
-            <motion.div 
+            <motion.div
               className="testimonial-header"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <motion.img 
-                src={profil} 
-                alt="Mathieu Madyson" 
+              <motion.img
+                src={profil}
+                alt="Mathieu Madyson"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.3 }}
               />
-              <motion.div 
+              <motion.div
                 className="testimonial-info"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -617,7 +743,7 @@ const Services = () => {
                 <p>CEO de Mercure</p>
               </motion.div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="rating"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -630,42 +756,44 @@ const Services = () => {
               <span className="star">★</span>
               <span className="star">★</span>
             </motion.div>
-            <motion.p 
+            <motion.p
               className="testimonial-text"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.6 }}
             >
-              Chaque site ou application que je développe est personnalisé selon vos besoins et pensé pour évoluer avec votre activité. Exit le prêt-à-porter, vive le cousu-main !
+              Chaque site ou application que je développe est personnalisé selon
+              vos besoins et pensé pour évoluer avec votre activité. Exit le
+              prêt-à-porter, vive le cousu-main !
             </motion.p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="testimonial-card"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
+            <motion.div
               className="testimonial-header"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <motion.img 
-                src={profil} 
-                alt="Sophie Martin" 
+              <motion.img
+                src={profil}
+                alt="Sophie Martin"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.3 }}
               />
-              <motion.div 
+              <motion.div
                 className="testimonial-info"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -676,7 +804,7 @@ const Services = () => {
                 <p>Fondatrice de Lumière</p>
               </motion.div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="rating"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -689,42 +817,44 @@ const Services = () => {
               <span className="star">★</span>
               <span className="star">★</span>
             </motion.div>
-            <motion.p 
+            <motion.p
               className="testimonial-text"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.6 }}
             >
-              Un vrai professionnel qui a su transformer ma vision en réalité. Le site est exactement comme je l'imaginais, moderne et efficace. Je recommande vivement !
+              Un vrai professionnel qui a su transformer ma vision en réalité.
+              Le site est exactement comme je l'imaginais, moderne et efficace.
+              Je recommande vivement !
             </motion.p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="testimonial-card"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
+            <motion.div
               className="testimonial-header"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <motion.img 
-                src={profil} 
-                alt="Lucas Dubois" 
+              <motion.img
+                src={profil}
+                alt="Lucas Dubois"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.3 }}
               />
-              <motion.div 
+              <motion.div
                 className="testimonial-info"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -735,7 +865,7 @@ const Services = () => {
                 <p>Directeur Marketing</p>
               </motion.div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="rating"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -748,42 +878,44 @@ const Services = () => {
               <span className="star">★</span>
               <span className="star">★</span>
             </motion.div>
-            <motion.p 
+            <motion.p
               className="testimonial-text"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.6 }}
             >
-              La qualité du travail et le respect des délais m'ont particulièrement impressionné. Un véritable atout pour notre transformation digitale.
+              La qualité du travail et le respect des délais m'ont
+              particulièrement impressionné. Un véritable atout pour notre
+              transformation digitale.
             </motion.p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="testimonial-card"
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
+            <motion.div
               className="testimonial-header"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <motion.img 
-                src={profil} 
-                alt="Emma Bernard" 
+              <motion.img
+                src={profil}
+                alt="Emma Bernard"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.3 }}
               />
-              <motion.div 
+              <motion.div
                 className="testimonial-info"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -794,7 +926,7 @@ const Services = () => {
                 <p>Startup Founder</p>
               </motion.div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="rating"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -807,14 +939,16 @@ const Services = () => {
               <span className="star">★</span>
               <span className="star">★</span>
             </motion.div>
-            <motion.p 
+            <motion.p
               className="testimonial-text"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.6 }}
             >
-              L'expertise technique combinée à une vraie compréhension des besoins business fait toute la différence. Notre site performe au-delà de nos attentes !
+              L'expertise technique combinée à une vraie compréhension des
+              besoins business fait toute la différence. Notre site performe
+              au-delà de nos attentes !
             </motion.p>
           </motion.div>
         </motion.div>
