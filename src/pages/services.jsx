@@ -7,7 +7,6 @@ import client3 from "../images/client3.png";
 import client4 from "../images/client4.png";
 import animecall from "../images/animecall.gif";
 import { motion } from "framer-motion";
-import Modal from "react-modal";
 import {
   FaDollarSign,
   FaBriefcase,
@@ -21,12 +20,9 @@ import {
   FaGift,
   FaCrown,
   FaPlus,
-  FaTimes,
 } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
 import { useCalendly } from "../context/CalendlyContext";
-
-Modal.setAppElement("#root");
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState("solution web");
@@ -785,9 +781,9 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: 0.6 }}
             >
-              Chaque site ou application que je développe est personnalisé selon
-              vos besoins et pensé pour évoluer avec votre activité. Exit le
-              prêt-à-porter, vive le cousu-main !
+              "Samuel a parfaitement compris nos besoins et a créé une solution
+              qui dépasse nos attentes. Son expertise technique et sa créativité
+              ont vraiment fait la différence pour notre entreprise."
             </motion.p>
           </motion.div>
 
@@ -1274,25 +1270,6 @@ const Services = () => {
         </motion.div>
       </motion.div>
 
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeCalendlyModal}
-        className="calendly-modal"
-        overlayClassName="calendly-modal-overlay"
-      >
-        <button
-          className="modal-close-button"
-          onClick={closeCalendlyModal}
-        >
-          <FaTimes />
-        </button>
-        <iframe
-          src="https://calendly.com/samuelceleste/appel"
-          width="100%"
-          height="100%"
-          frameBorder="0"
-        ></iframe>
-      </Modal>
     </>
   );
 };

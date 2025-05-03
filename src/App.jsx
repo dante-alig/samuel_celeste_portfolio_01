@@ -12,6 +12,7 @@ import {
 import React, { useRef } from "react";
 import { ProjectProvider } from "./context/ProjectContext";
 import { CalendlyProvider } from "./context/CalendlyContext";
+import CalendlyModal from "./components/CalendlyModal";
 
 library.add(faArrowUpRightFromSquare, faArrowRight);
 
@@ -29,6 +30,7 @@ function App() {
               <Route path="/project/:id" element={<Project />} />
               <Route path="/services" element={<Services />} />
             </Routes>
+            <CalendlyModal />
           </div>
         </Router>
       </CalendlyProvider>
