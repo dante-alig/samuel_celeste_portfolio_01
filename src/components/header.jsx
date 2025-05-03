@@ -80,7 +80,7 @@ const Header = ({ parallaxRef }) => {
             animate="visible"
             variants={describeVariants}
           >
-            Je suis Samuel Céleste, designer UX/UI et developpeur Full Stack. Je
+            Je suis Samuel Céleste, designer UX/UI et développeur Full Stack. Je
             crée des sites web, des applications mobiles et des automatisations
             IA.
           </motion.div>
