@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import "../styles/services.css";
 import profil from "../images/profil.png";
+import client1 from "../images/client1.png";
+import client2 from "../images/client2.png";
+import client3 from "../images/client3.png";
+import client4 from "../images/client4.png";
+import animecall from "../images/animecall.gif";
 import { motion } from "framer-motion";
 import Modal from "react-modal";
 import {
@@ -657,7 +662,7 @@ const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img src={profil} alt="Profile" />
+            <img src={animecall} alt="Profile" />
           </motion.div>
           <motion.div
             className="contact-text"
@@ -741,7 +746,7 @@ const Services = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <motion.img
-                src={profil}
+                src={client2}
                 alt="Mathieu Madyson"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
@@ -802,7 +807,7 @@ const Services = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <motion.img
-                src={profil}
+                src={client3}
                 alt="Sophie Martin"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
@@ -863,7 +868,7 @@ const Services = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <motion.img
-                src={profil}
+                src={client4}
                 alt="Lucas Dubois"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
@@ -924,7 +929,7 @@ const Services = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <motion.img
-                src={profil}
+                src={client1}
                 alt="Emma Bernard"
                 className="testimonial-image"
                 initial={{ scale: 0.8 }}
